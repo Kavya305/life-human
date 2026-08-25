@@ -1,0 +1,143 @@
+.card {
+  block-size: 100%;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.1rem, 2.5vw, 1.6rem);
+  text-decoration: none;
+  color: inherit;
+  block-size: 100%;
+}
+
+/* ── Plate ────────────────────────────────────────────────────────── */
+
+.plate {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--ground-raised);
+}
+
+.card[data-size='lead'] .plate {
+  aspect-ratio: 16 / 10;
+}
+
+.card[data-size='compact'] .plate {
+  aspect-ratio: 3 / 2;
+}
+
+/* A slow, small drift on approach. Not a zoom — a breath. */
+.plate > :first-child {
+  transition: transform 1.4s var(--ease);
+}
+
+.link:hover .plate > :first-child,
+.link:focus-visible .plate > :first-child {
+  transform: scale(1.035);
+}
+
+.type {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  padding: 0.7rem 0.95rem;
+  font-family: var(--sans);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* ── Text ─────────────────────────────────────────────────────────── */
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* The question leads, in the accent of its pillar. */
+.question {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-0);
+  line-height: 1.4;
+  color: var(--accent);
+  margin-block-end: 0.75rem;
+  text-wrap: pretty;
+}
+
+.card[data-size='lead'] .question {
+  font-size: var(--step-2);
+  margin-block-end: 1rem;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: var(--step-2);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.016em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.card[data-size='lead'] .title {
+  font-size: var(--step-4);
+  font-weight: 300;
+  letter-spacing: -0.024em;
+}
+
+.card[data-size='compact'] .title {
+  font-size: var(--step-1);
+}
+
+/* An underline that stays out of the way until it is wanted. */
+.link:hover .title,
+.link:focus-visible .title {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  text-decoration-color: var(--rule-strong);
+}
+
+.dek {
+  margin-block-start: 0.85rem;
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 46ch;
+  text-wrap: pretty;
+}
+
+.card[data-size='lead'] .dek {
+  font-size: var(--step-1);
+  line-height: 1.55;
+}
+
+.meta {
+  margin-block-start: auto;
+  padding-block-start: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.09em;
+  color: var(--ink-3);
+}
+
+.meta > [aria-hidden] {
+  opacity: 0.5;
+}
+
+.pillar {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+}

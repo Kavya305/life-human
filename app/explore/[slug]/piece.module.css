@@ -1,0 +1,270 @@
+/* ── Hero ───────────────────────────────────────────────────────────── */
+
+.hero {
+  padding-block-start: clamp(3rem, 8vw, 6rem);
+}
+
+.heroText {
+  padding-block-end: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.crumbs a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.crumbs a:hover {
+  opacity: 0.7;
+}
+
+.crumbs > [aria-hidden] {
+  opacity: 0.45;
+}
+
+/* The question is set larger than the title. On this site the question is the
+   work; the title is only its handle. */
+.question {
+  margin-block-start: clamp(2rem, 5vw, 3.25rem);
+  font-family: var(--serif);
+  font-size: var(--step-5);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.1;
+  letter-spacing: -0.026em;
+  color: var(--ink);
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+.title {
+  margin-block-start: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: var(--step-2);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--ink-2);
+  max-width: 34ch;
+}
+
+.dek {
+  margin-block-start: 1.5rem;
+  font-size: var(--step-1);
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 48ch;
+  text-wrap: pretty;
+}
+
+.meta {
+  margin-block-start: clamp(1.75rem, 4vw, 2.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sans);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+}
+
+.meta > [aria-hidden] {
+  opacity: 0.45;
+}
+
+.heroPlate {
+  block-size: clamp(16rem, 42vh, 30rem);
+  overflow: hidden;
+}
+
+/* ── Film ───────────────────────────────────────────────────────────── */
+
+.filmWrap {
+  margin-block-start: clamp(3rem, 7vw, 5rem);
+}
+
+.film {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.frame {
+  inline-size: 100%;
+  block-size: 100%;
+  border: 0;
+  display: block;
+}
+
+.pending {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  font-family: var(--sans);
+  font-size: var(--step--1);
+  letter-spacing: 0.09em;
+  color: var(--ink-3);
+}
+
+/* ── Body ───────────────────────────────────────────────────────────── */
+
+.body {
+  padding-block: clamp(3.5rem, 9vw, 6.5rem);
+}
+
+.pendingEssay {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-1);
+  color: var(--ink-3);
+}
+
+/* ── Sources ────────────────────────────────────────────────────────── */
+
+.sources {
+  padding-block-end: clamp(3.5rem, 8vw, 6rem);
+}
+
+.sources ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+  border-block-start: 1px solid var(--rule);
+}
+
+.sources li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-block: 1.05rem;
+  border-block-end: 1px solid var(--rule);
+}
+
+.sourceText {
+  font-family: var(--serif);
+  font-size: var(--step-0);
+  color: var(--ink);
+}
+
+.sourceText a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+.sourceDetail {
+  font-family: var(--sans);
+  font-size: var(--step--1);
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+
+.sourceNote {
+  margin-block-start: 1.75rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--ink-3);
+  max-width: 44ch;
+}
+
+/* ── Related ────────────────────────────────────────────────────────── */
+
+.related {
+  padding-block-end: clamp(3.5rem, 8vw, 6rem);
+}
+
+.shorts {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+  gap: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* ── Next ───────────────────────────────────────────────────────────── */
+
+.nextWrap {
+  border-block-start: 1px solid var(--rule);
+}
+
+/* A reader should never reach the end of a piece and find nothing. */
+.next {
+  display: block;
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color var(--dur-slow) var(--ease);
+}
+
+.next:hover,
+.next:focus-visible {
+  background-color: var(--ground-raised);
+}
+
+.next > span {
+  display: block;
+}
+
+.nextLabel {
+  font-family: var(--sans);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.nextQuestion {
+  display: block;
+  margin-block-start: 1.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-4);
+  font-weight: 300;
+  line-height: 1.14;
+  letter-spacing: -0.022em;
+  color: var(--accent);
+  max-width: 22ch;
+  text-wrap: balance;
+}
+
+.nextTitle {
+  display: block;
+  margin-block-start: 1.25rem;
+  font-family: var(--serif);
+  font-size: var(--step-1);
+  color: var(--ink-2);
+}
+
+.next .arrow {
+  display: inline-block;
+  transition: transform var(--dur) var(--ease);
+}
+
+.next:hover .arrow {
+  transform: translateX(0.3em);
+}
+
+@media (max-width: 48rem) {
+  .question {
+    max-width: 16ch;
+  }
+  .heroPlate {
+    block-size: clamp(12rem, 32vh, 18rem);
+  }
+}

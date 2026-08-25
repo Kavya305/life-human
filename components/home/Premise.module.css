@@ -1,0 +1,58 @@
+.premise {
+  text-align: center;
+}
+
+.pair {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(2rem, 8vw, 5.5rem);
+  margin: 0 0 clamp(2.75rem, 6vw, 4rem);
+}
+
+.pair dt {
+  font-family: var(--serif);
+  font-size: var(--step-3);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.pair dd {
+  margin: 0.7rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.divider {
+  inline-size: 1px;
+  block-size: 2.5rem;
+  background: var(--gold);
+  opacity: 0.55;
+  margin-block-start: 0.35rem;
+  flex: none;
+}
+
+.body {
+  font-size: var(--step-2);
+  line-height: 1.52;
+  color: var(--ink-2);
+  max-width: 40ch;
+  margin-inline: auto;
+  text-wrap: pretty;
+  letter-spacing: -0.008em;
+}
+
+.body + .body {
+  margin-block-start: 1.4em;
+}
+
+@media (max-width: 34rem) {
+  .pair {
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,258 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background-color: color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: border-color var(--dur) var(--ease);
+  border-block-end: 1px solid transparent;
+}
+
+/* The hairline only appears once the page has moved. On the hero, even a
+   single line is more than the first screen needs. */
+.header[data-moved='true'] {
+  border-block-end-color: var(--rule);
+}
+
+.header[data-open='true'] {
+  background-color: var(--ground);
+  backdrop-filter: none;
+}
+
+.inner {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 1.15rem var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-5);
+}
+
+/* ── Wordmark ─────────────────────────────────────────────────────── */
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* The one place gold is used as a fill: a full stop, three pixels wide. */
+.dot {
+  inline-size: 3px;
+  block-size: 3px;
+  border-radius: 50%;
+  background: var(--gold);
+  transform: translateY(0.05em);
+  transition: transform var(--dur-slow) var(--ease);
+}
+
+.wordmark:hover .dot {
+  transform: translateY(0.05em) scale(1.9);
+}
+
+/* ── Desktop nav ──────────────────────────────────────────────────── */
+
+.desktopNav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLink {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.075em;
+  text-decoration: none;
+  color: var(--ink-2);
+  position: relative;
+  padding-block: 0.4rem;
+  display: inline-block;
+  transition: color var(--dur) var(--ease);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0.1rem;
+  block-size: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+
+.navLink:hover,
+.navLink[data-active='true'] {
+  color: var(--ink);
+}
+
+.navLink:hover::after,
+.navLink[data-active='true']::after {
+  transform: scaleX(1);
+}
+
+.navLink[data-active='true']::after {
+  background: var(--gold);
+}
+
+/* ── Toggle ───────────────────────────────────────────────────────── */
+
+.toggle {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 0.6rem;
+  margin-inline-end: -0.6rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.toggleLines {
+  display: block;
+  inline-size: 22px;
+}
+
+.toggleLines span {
+  display: block;
+  block-size: 1px;
+  background: currentColor;
+  transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+
+.toggleLines span:first-child {
+  margin-block-end: 6px;
+}
+
+.header[data-open='true'] .toggleLines span:first-child {
+  transform: translateY(3.5px) rotate(9deg);
+}
+
+.header[data-open='true'] .toggleLines span:last-child {
+  transform: translateY(-3.5px) rotate(-9deg);
+}
+
+/* ── Mobile sheet ─────────────────────────────────────────────────── */
+
+.sheet {
+  display: none;
+}
+
+@media (max-width: 52rem) {
+  .desktopNav {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .sheet {
+    display: block;
+    position: fixed;
+    inset: 0;
+    top: 4rem;
+    background: var(--ground);
+    padding: clamp(2rem, 8vw, 4rem) var(--gutter) var(--gutter);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .sheet[hidden] {
+    display: none;
+  }
+
+  .sheet ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sheet li {
+    border-block-end: 1px solid var(--rule);
+    opacity: 0;
+    animation: rise var(--dur-slow) var(--ease) forwards;
+    animation-delay: calc(60ms * var(--i));
+  }
+
+  .sheet li:first-child {
+    border-block-start: 1px solid var(--rule);
+  }
+
+  .sheet a {
+    display: flex;
+    align-items: baseline;
+    gap: 1.1rem;
+    padding-block: clamp(1rem, 4vw, 1.5rem);
+    font-family: var(--serif);
+    font-size: var(--step-4);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .sheet a[data-active='true'] {
+    color: var(--gold-deep);
+  }
+
+  .sheetIndex {
+    font-family: var(--sans);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    color: var(--ink-3);
+  }
+
+  .sheetFoot {
+    margin-block-start: var(--sp-8);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .sheetFoot a {
+    font-size: var(--step-1);
+    font-style: italic;
+    color: var(--ink-2);
+    padding: 0;
+  }
+
+  .sheetQuestion {
+    font-family: var(--sans);
+    font-size: var(--step--1);
+    color: var(--ink-3);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet li {
+    opacity: 1;
+    animation: none;
+  }
+}

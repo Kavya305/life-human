@@ -1,0 +1,14 @@
+.header {
+  padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+.title {
+  margin-block-start: 1.6rem;
+  max-width: 17ch;
+  color: var(--ink);
+}
+
+.lede {
+  margin-block-start: clamp(1.5rem, 3vw, 2.25rem);
+  max-width: 46ch;
+}

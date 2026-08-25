@@ -1,0 +1,49 @@
+.principles {
+  padding-block: clamp(5rem, 12vw, 10rem);
+}
+
+.title {
+  margin-block-start: 1.5rem;
+  font-size: var(--step-2);
+  font-weight: 400;
+  color: var(--ink-2);
+  letter-spacing: -0.01em;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-block-start: clamp(3rem, 7vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.9rem, 2.4vw, 1.6rem);
+}
+
+.list > li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 0.45em;
+  font-family: var(--serif);
+  font-size: var(--step-4);
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.022em;
+}
+
+.left {
+  color: var(--ink);
+}
+
+/* "over" is the hinge of each line, so it recedes and lets the two nouns
+   carry the weight. */
+.over {
+  font-style: italic;
+  color: var(--gold);
+  font-size: 0.62em;
+  letter-spacing: 0;
+}
+
+.right {
+  color: var(--ink-3);
+}

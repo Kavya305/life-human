@@ -1,0 +1,86 @@
+.today {
+  text-align: center;
+  border-block: 1px solid var(--rule);
+  padding-block: clamp(5rem, 11vw, 9rem);
+}
+
+.lead {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.1rem, 2.6vw, 1.75rem);
+  align-items: center;
+}
+
+.prefix {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.line {
+  font-family: var(--serif);
+  font-size: var(--step-5);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.16;
+  letter-spacing: -0.024em;
+  color: var(--ink);
+  max-width: 20ch;
+  text-wrap: balance;
+  animation: arrive var(--dur-slow) var(--ease) both;
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.foot {
+  margin-block-start: clamp(2.5rem, 6vw, 3.75rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.another {
+  background: none;
+  border: 0;
+  padding: 0.45rem 0;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  border-block-end: 1px solid var(--rule-strong);
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.another:hover {
+  color: var(--ink);
+  border-block-end-color: var(--gold);
+}
+
+.permission {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-0);
+  color: var(--ink-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line {
+    animation: none;
+  }
+}

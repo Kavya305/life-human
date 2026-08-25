@@ -1,0 +1,218 @@
+.head {
+  margin-block-end: clamp(2.5rem, 6vw, 4rem);
+}
+
+.title {
+  margin-block-start: 1.5rem;
+  max-width: 18ch;
+  color: var(--ink);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-block-start: 1px solid var(--rule);
+}
+
+.list > li {
+  border-block-end: 1px solid var(--rule);
+}
+
+/* ── The row ──────────────────────────────────────────────────────── */
+
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 15rem) minmax(0, 1fr) 2rem;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding: clamp(1.6rem, 3.4vw, 2.5rem) clamp(0.75rem, 2vw, 1.75rem);
+  margin-inline: clamp(-0.75rem, -2vw, -1.75rem);
+  text-decoration: none;
+  /* The page's ink, not the row's world — see --page-ink in tokens.css. */
+  color: var(--page-ink);
+  isolation: isolate;
+  /* A row declares its own world, but stays transparent until hovered — so the
+     five sit on one ground and only reveal their register on approach. */
+  background-color: transparent;
+  transition: background-color var(--dur-slow) var(--ease), color var(--dur-slow) var(--ease);
+}
+
+/* The row carries its world's palette but does not wear it until approached —
+   otherwise a dark-world row would put light ink on the cream page. Once it
+   does paint the dark ground, its accent lifts to match. */
+.row:hover,
+.row:focus-visible {
+  background-color: var(--ground);
+  color: var(--ink);
+}
+
+.row[data-world='history']:hover,
+.row[data-world='history']:focus-visible {
+  --accent: var(--accent-lift);
+}
+
+.row:hover .name,
+.row:focus-visible .name {
+  color: var(--ink);
+}
+
+.row:hover .line,
+.row:focus-visible .line {
+  color: var(--ink-2);
+}
+
+.row:hover .subject,
+.row:focus-visible .subject {
+  color: var(--ink-3);
+}
+
+/* The accent rule draws itself in from the left. */
+.row::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  inline-size: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dur-slow) var(--ease);
+}
+
+.row:hover::before,
+.row:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.numeral {
+  font-family: var(--serif);
+  font-size: var(--step-0);
+  font-style: italic;
+  /* The muted inks are contrast-checked tokens; dimming with opacity instead
+     would quietly drop this below 4.5:1. */
+  color: var(--page-ink-3);
+  letter-spacing: 0.08em;
+  transition: color var(--dur-slow) var(--ease);
+}
+
+.row:hover .numeral,
+.row:focus-visible .numeral {
+  color: var(--accent);
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.name {
+  font-family: var(--serif);
+  font-size: var(--step-4);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--page-ink);
+  transition: color var(--dur-slow) var(--ease);
+}
+
+.subject {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--page-ink-3);
+  transition: color var(--dur-slow) var(--ease);
+}
+
+.line {
+  font-size: var(--step-0);
+  line-height: 1.5;
+  color: var(--page-ink-2);
+  transition: color var(--dur-slow) var(--ease);
+  max-width: 42ch;
+  text-wrap: pretty;
+}
+
+/* The plate fades in at the right edge — a glimpse into the room, not a
+   picture of it. */
+.plate {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  inline-size: clamp(9rem, 22%, 18rem);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--dur-slow) var(--ease);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 65%);
+  mask-image: linear-gradient(to right, transparent, #000 65%);
+}
+
+.row:hover .plate,
+.row:focus-visible .plate {
+  opacity: 1;
+}
+
+.arrow {
+  justify-self: end;
+  color: inherit;
+  font-size: var(--step-0);
+  transform: translateX(-0.4rem);
+  opacity: 0;
+  transition: transform var(--dur-slow) var(--ease), opacity var(--dur-slow) var(--ease);
+}
+
+.row:hover .arrow,
+.row:focus-visible .arrow {
+  transform: none;
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* ── Mobile: a contents page, not a squashed table ────────────────── */
+
+@media (max-width: 60rem) {
+  .row {
+    grid-template-columns: 2.25rem 1fr;
+    grid-template-areas:
+      'numeral names'
+      '.       line';
+    gap: 0.5rem 1rem;
+    align-items: start;
+    /* On touch there is no hover, so the accent rule is simply always there. */
+    background-color: transparent;
+  }
+
+  .numeral {
+    grid-area: numeral;
+    padding-block-start: 0.5rem;
+    color: var(--accent);
+  }
+
+  .names {
+    grid-area: names;
+  }
+
+  .line {
+    grid-area: line;
+    margin-block-start: 0.75rem;
+    font-size: var(--step--1);
+  }
+
+  .name {
+    font-size: var(--step-3);
+  }
+
+  .row::before {
+    transform: scaleY(1);
+    inline-size: 1px;
+    opacity: 0.55;
+  }
+
+  .plate,
+  .arrow {
+    display: none;
+  }
+}

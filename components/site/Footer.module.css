@@ -1,0 +1,88 @@
+.footer {
+  border-block-start: 1px solid var(--rule);
+  padding-block: clamp(3rem, 7vw, 5.5rem) 2rem;
+  margin-block-start: auto;
+}
+
+.inner,
+.base {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.name {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.question {
+  margin-block-start: 0.85rem;
+  font-size: var(--step-2);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-2);
+  letter-spacing: -0.012em;
+  max-width: 18ch;
+  line-height: 1.3;
+}
+
+.links {
+  display: flex;
+  gap: clamp(2.5rem, 7vw, 6rem);
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.links a {
+  font-family: var(--sans);
+  font-size: var(--step--1);
+  text-decoration: none;
+  color: var(--ink-3);
+  transition: color var(--dur) var(--ease);
+}
+
+.links a:hover {
+  color: var(--ink);
+}
+
+.base {
+  margin-block-start: clamp(3rem, 7vw, 5rem);
+  padding-block-start: 1.5rem;
+  border-block-start: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-3);
+}
+
+@media (max-width: 40rem) {
+  .inner {
+    flex-direction: column;
+  }
+  .question {
+    max-width: 22ch;
+  }
+}

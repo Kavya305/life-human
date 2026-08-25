@@ -1,0 +1,144 @@
+.threshold {
+  position: relative;
+  min-block-size: 88svh;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(4rem, 12vh, 8rem) clamp(4rem, 10vh, 7rem);
+  overflow: hidden;
+}
+
+/* The plate sits behind the type at very low contrast — you should register it
+   without ever quite looking at it. */
+.plate {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: max(calc(50% - var(--max) / 2), 0px);
+  inline-size: min(52%, 40rem);
+  opacity: 0.5;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 38%, #000 100%);
+  mask-image: linear-gradient(to right, transparent, #000 38%, #000 100%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  inline-size: 100%;
+}
+
+.question {
+  max-width: 15ch;
+  color: var(--ink);
+  /* The one entrance the site makes on load. Everything else waits to be
+     scrolled to. */
+  animation: settle 1.4s var(--ease) both;
+}
+
+.support {
+  margin-block-start: clamp(1.75rem, 4vw, 2.75rem);
+  max-width: 34ch;
+  font-size: var(--step-1);
+  line-height: 1.6;
+  color: var(--ink-2);
+  text-wrap: pretty;
+  animation: settle 1.4s var(--ease) 220ms both;
+}
+
+/* ── Begin ────────────────────────────────────────────────────────── */
+
+.begin {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-block-start: clamp(3rem, 7vw, 4.5rem);
+  text-decoration: none;
+  color: var(--ink-3);
+  animation: settle 1.4s var(--ease) 440ms both;
+  transition: color var(--dur) var(--ease);
+}
+
+.begin:hover {
+  color: var(--ink);
+}
+
+/* A single hairline that breathes. One cycle is a little over four seconds —
+   roughly the length of a human breath. */
+.breath {
+  inline-size: 1px;
+  block-size: 3rem;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  transform-origin: top;
+  animation: breathe var(--breath) var(--ease-soft) infinite;
+}
+
+.beginLabel {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scaleY(0.42);
+    opacity: 0.45;
+  }
+  45% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: translateY(1.1rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Mobile: designed, not shrunk ─────────────────────────────────── */
+
+@media (max-width: 52rem) {
+  .threshold {
+    min-block-size: 82svh;
+    align-items: flex-end;
+  }
+
+  /* The plate moves behind the whole screen and drops further back, so the
+     question keeps the full width of the page rather than half of it. */
+  .plate {
+    inset-inline: 0;
+    inline-size: 100%;
+    opacity: 0.32;
+    -webkit-mask-image: radial-gradient(ellipse at 70% 30%, #000, transparent 72%);
+    mask-image: radial-gradient(ellipse at 70% 30%, #000, transparent 72%);
+  }
+
+  .question {
+    max-width: 12ch;
+  }
+
+  .support {
+    max-width: 30ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .question,
+  .support,
+  .begin {
+    animation: none;
+  }
+  .breath {
+    animation: none;
+    transform: scaleY(1);
+  }
+}

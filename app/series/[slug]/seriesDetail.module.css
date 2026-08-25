@@ -1,0 +1,192 @@
+.hero {
+  padding-block-start: clamp(3rem, 8vw, 6rem);
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.crumbs a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.crumbs a:hover {
+  opacity: 0.7;
+}
+
+.crumbs > [aria-hidden] {
+  opacity: 0.45;
+}
+
+.name {
+  margin-block-start: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: var(--step-5);
+  font-weight: 300;
+  letter-spacing: -0.024em;
+  color: var(--ink);
+  max-width: 18ch;
+}
+
+.alt {
+  margin-block-start: 0.85rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.question {
+  margin-block-start: clamp(1.75rem, 4vw, 2.5rem);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-2);
+  line-height: 1.35;
+  color: var(--accent);
+  max-width: 30ch;
+  text-wrap: pretty;
+}
+
+.description {
+  margin-block-start: 1.5rem;
+  font-size: var(--step-1);
+  line-height: 1.62;
+  color: var(--ink-2);
+  max-width: 54ch;
+  text-wrap: pretty;
+}
+
+.plate {
+  margin-block-start: clamp(2.5rem, 6vw, 4.5rem);
+  block-size: clamp(12rem, 32vh, 22rem);
+  overflow: hidden;
+}
+
+/* ── Parts ──────────────────────────────────────────────────────────── */
+
+.parts {
+  padding-block: clamp(3.5rem, 8vw, 6rem) var(--section-y);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  counter-reset: part;
+  border-block-start: 1px solid var(--rule);
+}
+
+.list > li {
+  border-block-end: 1px solid var(--rule);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: start;
+  padding-block: clamp(1.5rem, 3.2vw, 2.25rem);
+  text-decoration: none;
+  color: inherit;
+}
+
+.part {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+  padding-block-start: 0.4rem;
+  transition: color var(--dur) var(--ease);
+}
+
+.row:hover .part {
+  color: var(--accent);
+}
+
+.rowText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.rowQuestion {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-0);
+  color: var(--accent);
+  max-width: 46ch;
+}
+
+.rowTitle {
+  font-family: var(--serif);
+  font-size: var(--step-2);
+  letter-spacing: -0.014em;
+  color: var(--ink);
+}
+
+.row:hover .rowTitle {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+  text-decoration-color: var(--rule-strong);
+}
+
+.rowDek {
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+
+.rowMeta {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.11em;
+  color: var(--ink-3);
+  white-space: nowrap;
+  padding-block-start: 0.4rem;
+}
+
+.empty,
+.continuing {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-3);
+  max-width: 42ch;
+}
+
+.empty {
+  margin-block-start: 2.5rem;
+  font-size: var(--step-1);
+}
+
+.continuing {
+  margin-block-start: 2.5rem;
+  font-size: var(--step--1);
+  line-height: 1.65;
+}
+
+@media (max-width: 52rem) {
+  .row {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+  }
+  .rowMeta {
+    grid-column: 2;
+    padding-block-start: 0.6rem;
+    white-space: normal;
+  }
+  .rowTitle {
+    font-size: var(--step-1);
+  }
+}

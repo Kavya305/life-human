@@ -1,0 +1,10 @@
+.note {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink-3);
+  padding: 1.35rem 0 1.35rem 0;
+  border-block: 1px solid var(--rule);
+  margin-block: 2.5em;
+  font-style: italic;
+  text-wrap: pretty;
+}

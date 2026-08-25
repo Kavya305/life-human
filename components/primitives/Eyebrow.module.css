@@ -1,0 +1,13 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.eyebrow[data-rule='true']::before {
+  content: '';
+  inline-size: 1.75rem;
+  block-size: 1px;
+  background: var(--gold);
+  flex: none;
+}

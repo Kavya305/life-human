@@ -1,0 +1,163 @@
+/* ============================================================================
+   Life.Human — design tokens
+
+   One system, three worlds. A *world* sets the ground and the ink; a *pillar*
+   sets a single accent. Nothing else changes between sections, which is what
+   keeps five rooms feeling like one house.
+
+   Worlds are applied with [data-world] on any element, so a single section can
+   change register without a separate stylesheet.
+   ========================================================================= */
+
+:root {
+  /* ── World A · Philosophy (default) ───────────────────────────────── */
+  --ground: #faf6ef;
+  --ground-raised: #f3ede2;
+  --ground-sunk: #f0e9dc;
+  --ink: #1f1b16;
+  --ink-2: #4a423a;
+  --ink-3: #726a60;
+  --rule: #e0d7c8;
+  --rule-strong: #cfc3ae;
+
+  /* Restrained gold. Hairlines and marks only — never a fill, never a gradient. */
+  --gold: #b08d4f;
+  --gold-deep: #8a6a2f;
+
+  /* The accent of the current context. Pillars override it. */
+  --accent: #37476b;
+  --accent-ink: #37476b;
+
+  /* ── Pillar accents ───────────────────────────────────────────────── */
+  --think: #37476b;        /* Ink Indigo   */
+  --understand: #8a4b2f;   /* Burnt Bronze */
+  --discover: #7c5c22;     /* Aged Ochre   */
+  --question: #3f5551;     /* Iron Teal    */
+  --become: #586b41;       /* Olive Leaf   */
+
+  /* Each accent has a lifted twin for use on the dark ground of World B.
+     Which one applies depends on the ground being *painted*, not the world
+     being declared — see the pillar scoping below. */
+  --think-lift: #8fa3cb;
+  --understand-lift: #d2916e;
+  --discover-lift: #c9a962;
+  --question-lift: #8fb0aa;
+  --become-lift: #a3b884;
+
+  /* ── Typography ───────────────────────────────────────────────────── */
+  --serif: var(--font-newsreader), 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --step--1: clamp(0.8125rem, 0.79rem + 0.11vw, 0.875rem);
+  --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --step-1: clamp(1.125rem, 1.07rem + 0.28vw, 1.3125rem);
+  --step-2: clamp(1.3125rem, 1.22rem + 0.45vw, 1.625rem);
+  --step-3: clamp(1.5rem, 1.33rem + 0.85vw, 2.125rem);
+  --step-4: clamp(1.875rem, 1.55rem + 1.6vw, 3rem);
+  --step-5: clamp(2.25rem, 1.7rem + 2.75vw, 4.25rem);
+  --step-6: clamp(2.75rem, 1.75rem + 5vw, 6.25rem);
+
+  /* Reading measure. This is a reading site, so it is generous. */
+  --measure: 34rem;
+  --measure-wide: 44rem;
+
+  /* ── Space ────────────────────────────────────────────────────────── */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  /* The palette of the surface currently being *painted*, as opposed to the
+     palette an element has merely declared. Custom properties substitute at
+     computed-value time, so these inherit as literal colours and are not
+     re-resolved by a descendant that declares a different world. That is what
+     lets an element adopt a world's accent without adopting its ink. */
+  --page-ground: var(--ground);
+  --page-ink: var(--ink);
+  --page-ink-2: var(--ink-2);
+  --page-ink-3: var(--ink-3);
+  --page-rule: var(--rule);
+
+  /* Section rhythm — deliberately large. When in doubt, more room to think. */
+  --section-y: clamp(4.5rem, 9vw, 9.5rem);
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --max: 78rem;
+  --max-narrow: 46rem;
+
+  /* ── Motion ───────────────────────────────────────────────────────── */
+  /* Animation should feel like breathing. One breath is about four seconds. */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 260ms;
+  --dur: 480ms;
+  --dur-slow: 900ms;
+  --breath: 4.2s;
+}
+
+/* ── World B · History & Society ───────────────────────────────────── */
+[data-world='history'] {
+  --ground: #1a1714;
+  --ground-raised: #232019;
+  --ground-sunk: #141210;
+  --ink: #ede6da;
+  --ink-2: #bdb4a6;
+  --ink-3: #92877b;
+  --rule: #34302a;
+  --rule-strong: #4a443b;
+  --gold: #c9a568;
+  --gold-deep: #d8b87e;
+}
+
+/* ── World C · Ancient Wisdom ──────────────────────────────────────── */
+[data-world='wisdom'] {
+  --ground: #ede7d9;
+  --ground-raised: #e4dcca;
+  --ground-sunk: #e7e0cf;
+  --ink: #221e17;
+  --ink-2: #4c4436;
+  --ink-3: #686051;
+  --rule: #d3c8b2;
+  --rule-strong: #bfb094;
+  /* gold-deep is the one gold that is ever set as text. On this earth ground
+     the shared value drops to 4.07:1, so this world darkens it. */
+  --gold-deep: #7d5f28;
+}
+
+/* ── Pillar scoping ────────────────────────────────────────────────── */
+[data-pillar='think'] { --accent: var(--think); --accent-lift: var(--think-lift); }
+[data-pillar='understand'] { --accent: var(--understand); --accent-lift: var(--understand-lift); }
+[data-pillar='discover'] { --accent: var(--discover); --accent-lift: var(--discover-lift); }
+[data-pillar='question'] { --accent: var(--question); --accent-lift: var(--question-lift); }
+[data-pillar='become'] { --accent: var(--become); --accent-lift: var(--become-lift); }
+
+/* An accent lifts only where a dark ground is actually painted. An element
+   that merely declares the history world — a pillar row sitting on cream —
+   keeps the accent that is legible where it really is. */
+[data-world='history'][data-paint],
+[data-world='history'][data-paint] [data-pillar] {
+  --accent: var(--accent-lift, var(--gold));
+}
+
+/* Declaring a world *redefines the palette*. Painting with it is a separate
+   decision, taken with `data-paint`.
+
+   Keeping these apart matters: an element can adopt a world's accent — a card
+   plate, a pillar row — without adopting its ground and ink, which would drop
+   light text onto a cream page. */
+[data-paint] {
+  background-color: var(--ground);
+  color: var(--ink);
+
+  /* Republish the palette actually being painted. */
+  --page-ground: var(--ground);
+  --page-ink: var(--ink);
+  --page-ink-2: var(--ink-2);
+  --page-ink-3: var(--ink-3);
+  --page-rule: var(--rule);
+}

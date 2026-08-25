@@ -1,0 +1,130 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.75rem, 5vw, 4rem);
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+  border-block: 1px solid var(--rule);
+}
+
+.group {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-inline-size: 0;
+}
+
+.legend {
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-block-end: 0.9rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+}
+
+/* Filters are text, not pills. A row of buttons would look like an interface;
+   this looks like a contents line. */
+.chip {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  font-family: var(--serif);
+  font-size: var(--step-1);
+  color: var(--ink-3);
+  position: relative;
+  transition: color var(--dur) var(--ease);
+}
+
+.chip::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  block-size: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+
+.chip:hover {
+  color: var(--ink);
+}
+
+.chip[data-on='true'] {
+  color: var(--ink);
+}
+
+.chip[data-on='true']::after,
+.chip:hover::after {
+  transform: scaleX(1);
+}
+
+.chip[data-on='true'][data-pillar] {
+  color: var(--accent);
+}
+
+.count {
+  margin-block: clamp(2rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.clear {
+  text-decoration: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--ink-2);
+  border-block-end: 1px solid var(--rule-strong);
+  transition: color var(--dur) var(--ease);
+}
+
+.clear:hover {
+  color: var(--ink);
+}
+
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(22rem, 100%), 1fr));
+  gap: clamp(2.5rem, 5vw, 4rem) clamp(1.75rem, 3.5vw, 3rem);
+}
+
+.empty {
+  padding-block: clamp(4rem, 10vw, 7rem);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-2);
+  color: var(--ink-3);
+  max-width: 30ch;
+}
+
+@media (max-width: 40rem) {
+  .filters {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  .chip {
+    font-size: var(--step-0);
+  }
+  .grid {
+    gap: 3rem;
+  }
+}

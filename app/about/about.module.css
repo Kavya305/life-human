@@ -1,0 +1,206 @@
+.statementWrap {
+  padding-block: clamp(2rem, 5vw, 3.5rem) clamp(3.5rem, 8vw, 6rem);
+  border-block-end: 1px solid var(--rule);
+}
+
+/* The one sentence the whole project rests on. It gets a screen of its own. */
+.statement {
+  font-family: var(--serif);
+  font-size: var(--step-4);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.22;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+  max-width: 26ch;
+  text-wrap: balance;
+}
+
+.sections {
+  padding-block: clamp(3.5rem, 9vw, 6.5rem);
+}
+
+.section + .section {
+  margin-block-start: clamp(3.5rem, 8vw, 6rem);
+  padding-block-start: clamp(3.5rem, 8vw, 6rem);
+  border-block-start: 1px solid var(--rule);
+}
+
+.question {
+  font-size: var(--step-3);
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  max-width: 22ch;
+  margin-block-end: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+/* ── Approach ───────────────────────────────────────────────────────── */
+
+.approach {
+  padding-block: clamp(4.5rem, 11vw, 8.5rem);
+}
+
+.approachTitle {
+  margin-block-start: 1.5rem;
+  font-size: var(--step-2);
+  font-weight: 400;
+  color: var(--ink-2);
+}
+
+.approachIntro {
+  margin-block-start: 1.5rem;
+  font-size: var(--step-0);
+  line-height: 1.65;
+  color: var(--ink-3);
+  max-width: 46ch;
+}
+
+.principles {
+  list-style: none;
+  padding: 0;
+  margin-block-start: clamp(3rem, 7vw, 4.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.9rem, 2.4vw, 1.6rem);
+}
+
+.principles > li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 0.45em;
+  font-family: var(--serif);
+  font-size: var(--step-4);
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.022em;
+}
+
+.left {
+  color: var(--ink);
+}
+
+.over {
+  font-style: italic;
+  color: var(--gold);
+  font-size: 0.62em;
+  letter-spacing: 0;
+}
+
+.right {
+  color: var(--ink-3);
+}
+
+/* ── Claim kinds ────────────────────────────────────────────────────── */
+
+.claims {
+  padding-block: clamp(4rem, 10vw, 7.5rem);
+}
+
+.claimsTitle {
+  margin-block-start: 1.5rem;
+  font-size: var(--step-4);
+  font-weight: 300;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+  max-width: 18ch;
+}
+
+.claimsIntro {
+  margin-block-start: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: var(--step-1);
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 52ch;
+  text-wrap: pretty;
+}
+
+.kinds {
+  margin-block-start: clamp(2.5rem, 6vw, 4rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: clamp(1.75rem, 4vw, 3rem);
+}
+
+.kind {
+  --claim: var(--ink-3);
+  padding-inline-start: 1.35rem;
+  border-inline-start: 1px solid var(--claim);
+  block-size: 100%;
+}
+
+/* The same four marks used inside the essays, so the legend and the thing
+   it explains are visibly the same system. */
+.kind[data-kind='fact'] {
+  --claim: var(--ink-2);
+}
+.kind[data-kind='interpretation'] {
+  --claim: var(--understand);
+}
+.kind[data-kind='hypothesis'] {
+  --claim: var(--discover);
+}
+.kind[data-kind='question'] {
+  --claim: var(--think);
+}
+
+.kind dt {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--claim);
+}
+
+.kind dd {
+  margin: 0.9rem 0 0;
+  font-size: var(--step-0);
+  line-height: 1.62;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.dot {
+  inline-size: 7px;
+  block-size: 7px;
+  background: var(--claim);
+  flex: none;
+}
+
+.kind[data-kind='interpretation'] .dot {
+  transform: rotate(45deg);
+  inline-size: 6px;
+  block-size: 6px;
+}
+
+.kind[data-kind='hypothesis'] .dot {
+  background: none;
+  border: 1px solid var(--claim);
+  border-radius: 50%;
+  inline-size: 8px;
+  block-size: 8px;
+}
+
+.kind[data-kind='question'] .dot {
+  background: none;
+  border: 1px solid var(--claim);
+  border-block-end-color: transparent;
+  border-inline-end-color: transparent;
+  inline-size: 8px;
+  block-size: 8px;
+}
+
+.claimsNote {
+  margin-block-start: clamp(2.5rem, 6vw, 4rem);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--step-1);
+  line-height: 1.55;
+  color: var(--ink-3);
+  max-width: 40ch;
+}
