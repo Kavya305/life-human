@@ -9,10 +9,13 @@ const sections = [
   { href: '/today', label: 'Today I Will' },
 ];
 
+/* The Instagram link came with QR tracking parameters attached; they are
+   dropped here so the footer does not hand a reader's origin to anyone. */
 const social = [
-  { href: 'https://instagram.com/', label: 'Instagram' },
-  { href: 'https://youtube.com/', label: 'YouTube' },
-  { href: 'https://facebook.com/', label: 'Facebook' },
+  { href: 'https://www.instagram.com/life.human26', label: 'Instagram' },
+  { href: 'https://www.youtube.com/@Life-jgn', label: 'YouTube' },
+  { href: 'https://www.facebook.com/share/1Dd5x8XaTc/', label: 'Facebook' },
+  { href: 'https://life-jgn.blogspot.com', label: 'Blog' },
 ];
 
 export function Footer() {
