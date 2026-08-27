@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { todayIWill } from '@/content/today';
+import { ShareToday } from './ShareToday';
 import styles from './TodayIWill.module.css';
 
 /**
@@ -25,7 +26,15 @@ const dayIndex = () => {
   return days % todayIWill.length;
 };
 
-export function TodayIWill({ heading = 'h2' }: { heading?: 'h2' | 'h1' }) {
+export function TodayIWill({
+  heading = 'h2',
+  share = false,
+}: {
+  heading?: 'h2' | 'h1';
+  /* Only the Today page offers this. The homepage band stays a place to
+     read one line, not a place to be asked to broadcast it. */
+  share?: boolean;
+}) {
   const [index, setIndex] = useState(dayIndex);
   /* Keyed on the index so the line re-enters rather than snapping. */
   const line = todayIWill[index];
@@ -51,6 +60,8 @@ export function TodayIWill({ heading = 'h2' }: { heading?: 'h2' | 'h1' }) {
           </button>
           <span className={styles.permission}>Take it or leave it.</span>
         </div>
+
+        {share && <ShareToday line={line} />}
       </div>
     </section>
   );

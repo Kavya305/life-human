@@ -19,7 +19,7 @@ export default function TodayPage() {
 
   return (
     <>
-      <TodayIWill heading="h1" />
+      <TodayIWill heading="h1" share />
 
       <section className={`shell-narrow ${styles.note}`} aria-labelledby="why-h">
         <Reveal>
