@@ -80,6 +80,7 @@ function readOne(file: string): Piece | null {
     ...(strList(data.relatedShorts).length ? { relatedShorts: strList(data.relatedShorts) } : {}),
     ...(strList(data.relatedIdeas).length ? { relatedIdeas: strList(data.relatedIdeas) } : {}),
     ...(data.featured === true ? { featured: true } : {}),
+    ...(data.draft === true ? { draft: true } : {}),
   };
 }
 
@@ -92,4 +93,14 @@ function load(): Piece[] {
     .filter((p): p is Piece => p !== null);
 }
 
-export const pieces: Piece[] = load();
+/** Everything on disk, drafts included. Only tooling should need this. */
+export const allFiles: Piece[] = load();
+
+/**
+ * What the site is allowed to show.
+ *
+ * Drafts are filtered out here rather than at each call site, so a route,
+ * a listing or the sitemap cannot accidentally leak one by forgetting to
+ * check. Nothing downstream has to know drafts exist.
+ */
+export const pieces: Piece[] = allFiles.filter((p) => !p.draft);

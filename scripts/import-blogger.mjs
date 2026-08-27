@@ -22,6 +22,9 @@ const B = '{http://schemas.google.com/blogger/2018}';
 
 const args = process.argv.slice(2);
 const dry = args.includes('--dry');
+/* Drafts are excluded unless asked for, and even then they arrive marked as
+   drafts so nothing unpublished becomes public by importing it. */
+const includeDrafts = args.includes('--drafts');
 const feeds = args.filter((a) => !a.startsWith('--'));
 if (!feeds.length) {
   console.error('Usage: import-blogger.mjs [--dry] <feed.atom> [...]');
@@ -163,7 +166,8 @@ for (const feed of feeds) {
     const body = htmlToMarkdown(html);
     const plain = body.replace(/[#>*_]/g, ' ');
 
-    if (trashed || status !== 'LIVE') {
+    const isDraft = status !== 'LIVE';
+    if (trashed || (isDraft && !includeDrafts)) {
       skipped.push({ blog, title: title || '(untitled)', why: trashed ? 'in trash' : 'draft', published });
       continue;
     }
@@ -203,13 +207,14 @@ for (const feed of feeds) {
     if (dek) fm.push(`dek: ${q(dek)}`);
     fm.push(`plate: ${q(PLATES[pillar])}`);
     fm.push(`minutes: ${Math.max(1, Math.round(words / 200))}`);
+    if (isDraft) fm.push('draft: true');
 
     const file = path.join(OUT, `${slug}.md`);
     if (!dry) {
       fs.mkdirSync(OUT, { recursive: true });
       fs.writeFileSync(file, `---\n${fm.join('\n')}\n---\n\n${body}\n`, 'utf8');
     }
-    imported.push({ blog, title, slug, pillar, seriesSlug, part, words, dek: Boolean(dek) });
+    imported.push({ blog, title, slug, pillar, seriesSlug, part, words, isDraft, dek: Boolean(dek) });
   }
 }
 
@@ -222,6 +227,7 @@ for (const p of imported.sort((a, b) => a.pillar.localeCompare(b.pillar))) {
     pad(p.pillar, 11) +
       pad(p.words, 7) +
       pad(p.seriesSlug ? `${p.seriesSlug}${p.part ? ` #${p.part}` : ''}` : '—', 22) +
+      (p.isDraft ? '[draft] ' : '') +
       p.title,
   );
 }

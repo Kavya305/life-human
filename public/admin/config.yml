@@ -126,6 +126,15 @@ collections:
         value_type: int
         min: 1
 
+      - label: Draft — keep this hidden from the site
+        name: draft
+        widget: boolean
+        required: false
+        default: false
+        hint: >-
+          While this is on, the piece exists here but does not appear anywhere
+          on the site. Turn it off when it is ready to be read.
+
       - label: Feature on the homepage
         name: featured
         widget: boolean

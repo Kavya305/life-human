@@ -102,4 +102,7 @@ export interface Piece {
   /** Slugs of pieces that argue with, or extend, this one. */
   relatedIdeas?: string[];
   featured?: boolean;
+  /** Written but not yet shown. Drafts are excluded from every listing and
+      have no page built, so they are unreachable until this is cleared. */
+  draft?: boolean;
 }
