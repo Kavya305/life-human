@@ -29,7 +29,7 @@ const site = {
   tagline: 'Question. Think. Choose Humanity.',
   description:
     'A better world begins with a better human. Life.Human is an exploration of life, humanity, wisdom and the ideas that shape the way we live.',
-  url: 'https://lifehuman.example',
+  url: 'https://life-human.netlify.app',
 };
 
 export const metadata: Metadata = {

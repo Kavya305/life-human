@@ -4,6 +4,6 @@ export default function robots(): MetadataRoute.Robots {
   return {
     // The editor is private tooling, not part of the publication.
     rules: { userAgent: '*', allow: '/', disallow: ['/admin'] },
-    sitemap: 'https://lifehuman.example/sitemap.xml',
+    sitemap: 'https://life-human.netlify.app/sitemap.xml',
   };
 }

@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { pieces } from '@/lib/pieces';
 import { series } from '@/content/series';
 
-const base = 'https://lifehuman.example';
+const base = 'https://life-human.netlify.app';
 
 /** Static routes plus every piece and series — the archive is known at build. */
 export default function sitemap(): MetadataRoute.Sitemap {
