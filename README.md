@@ -38,34 +38,53 @@ closes and takes it.
 
 ## Adding content
 
-All content lives in `content/` as typed TypeScript. Adding work never
-requires touching a component.
+Two ways in. Both write the same files.
 
-### A new piece
+### The editor (what the owner uses)
 
-Append an object to `content/pieces.ts`:
+Go to **`/admin`** and sign in with GitHub. Only accounts with write access to
+this repository can log in — that is the whole of the access control, so grant
+repo access carefully.
 
-```ts
-{
-  slug: 'the-long-silence',
-  title: 'The Long Silence',
-  question: 'What do we lose when we are never alone?',  // the real subject
-  pillar: 'think',              // think | understand | discover | question | become
-  type: 'essay',                // film | essay | short | visual
-  seriesSlug: 'life-and-time',  // optional
-  part: 2,                      // position within the series
-  date: '2026-06-02',           // ISO
-  dek: 'One or two sentences that carry the card.',
-  plate: 'threshold',           // see Imagery below
-  videoId: 'abc123',            // optional YouTube id; omitted renders a waiting state
-  minutes: 9,
-  essay: [ /* blocks — see below */ ],
-  sources: [{ text: 'Author', detail: 'Work, year' }],
-  relatedShorts: ['short-the-pause'],
-  relatedIdeas: ['enough'],
-  featured: true,               // surfaces on the homepage
-}
+Publishing commits a markdown file to `content/pieces/` and Vercel rebuilds.
+Drafts go to a branch first (`publish_mode: editorial_workflow`), so nothing
+goes live by accident.
+
+Setup, once:
+
+1. GitHub → Settings → Developer settings → OAuth Apps → New OAuth App.
+   Homepage `https://<site>`, callback `https://<site>/api/callback`.
+2. In Vercel, add `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`.
+3. Put the deployed URL into `base_url` in `public/admin/config.yml`.
+
+### By hand
+
+Each piece is one markdown file in `content/pieces/`, front matter plus body:
+
+```markdown
+---
+title: "The Long Silence"
+question: "What do we lose when we are never alone?"   # the real subject
+pillar: "think"          # think | understand | discover | question | become
+type: "essay"            # film | essay | short | visual
+seriesSlug: "life-and-time"
+part: 2
+date: "2026-06-02"
+dek: "One or two sentences that carry the card."
+plate: "threshold"
+videoId: "abc123"        # optional; omitted renders a waiting state
+minutes: 9
+featured: true
+relatedIdeas: ["enough"]
+sources:
+  - text: "Blaise Pascal"
+    detail: "Pensées, 139"
+---
+
+The body, in markdown. See Essay body below.
 ```
+
+The filename is the web address: `the-long-silence.md` → `/explore/the-long-silence`.
 
 The route, the sitemap entry, the series listing, the archive filters and the
 "next exploration" link all follow automatically.
@@ -74,18 +93,19 @@ The route, the sitemap entry, the series listing, the archive filters and the
 
 Append to `content/series.ts`. Pieces join it by setting `seriesSlug`.
 
-### Essay blocks
+### Essay body
 
-`essay` is an array of typed blocks, never an HTML string — so content can be
-validated, moved to a CMS, or re-rendered in another medium later.
+Written as markdown, parsed into a typed `Block[]` before it reaches a
+component — so the rendering layer never handles raw HTML. The parser is
+`lib/markdown.ts`, about 100 lines, no dependency.
 
-| Block | Renders as |
+| Syntax | Renders as |
 |---|---|
-| `{ kind: 'p', text }` | A paragraph |
-| `{ kind: 'h', text }` | A section heading |
-| `{ kind: 'quote', text, attribution? }` | A pulled quote |
-| `{ kind: 'aside', text }` | An editorial note, quieter than the body |
-| `{ kind: 'claim', claim, text }` | **An epistemic marker** — see below |
+| A line of text | A paragraph |
+| `## Heading` | A section heading |
+| `> Quoted line` | A pulled quote (`> — Name` adds attribution) |
+| `:::note` … `:::` | An editorial aside, quieter than the body |
+| `:::fact` … `:::` | **An epistemic marker** — see below |
 
 ### Epistemic markers
 
@@ -94,11 +114,22 @@ identical on a page unless someone marks the difference, and on the subjects
 this publication works on — history, religion, education, social criticism —
 that blurring is where the damage happens.
 
-```ts
-{ kind: 'claim', claim: 'fact',           text: 'Checkable, with a source we will name.' }
-{ kind: 'claim', claim: 'interpretation', text: 'A reading of the evidence; others may read it differently.' }
-{ kind: 'claim', claim: 'hypothesis',     text: 'Goes beyond what the evidence supports. Worth considering, not settled.' }
-{ kind: 'claim', claim: 'question',       text: 'Genuinely open. We are not going to close it for you.' }
+```markdown
+:::fact
+Checkable, with a source we will name.
+:::
+
+:::interpretation
+A reading of the evidence; others may read it differently.
+:::
+
+:::hypothesis
+Goes beyond what the evidence supports. Worth considering, not settled.
+:::
+
+:::question
+Genuinely open. We are not going to close it for you.
+:::
 ```
 
 Each kind has its own colour *and* its own dot shape — filled square, diamond,
@@ -235,8 +266,11 @@ components/
               TodayIWill  SeriesStrip  Principles
   archive/    ArchiveBrowser  PieceCard
   piece/      Claim
-content/      types  pillars  series  pieces  principles  today  about
-lib/          content (queries)  format
+app/api/      auth  callback   (GitHub OAuth for the editor)
+public/admin/ the CMS: index.html + config.yml
+content/      types  pillars  series  principles  today  about
+content/pieces/  one markdown file per piece
+lib/          content (queries)  pieces (loader)  markdown (parser)  format
 ```
 
 Almost everything is a server component. The only client components are
@@ -251,9 +285,11 @@ bundle. A library's shelves should have addresses.
 
 ## Before going live
 
-- [ ] Replace the sample content in `content/pieces.ts`. It is written rather
+- [ ] Replace the sample content in `content/pieces/`. It is written rather
       than dummied so the typography could be judged honestly — **do not ship
       any of it as established fact.**
+- [ ] Create the GitHub OAuth app and set the two Vercel env vars (see above).
+- [ ] Put the real deployed URL into `base_url` in `public/admin/config.yml`.
 - [ ] Set the real domain in `app/layout.tsx` (`site.url`), `app/sitemap.ts`
       and `app/robots.ts`.
 - [ ] Point the footer social links at the real accounts.

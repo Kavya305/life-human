@@ -1,4 +1,4 @@
-import { pieces } from '@/content/pieces';
+import { pieces } from '@/lib/pieces';
 import { series } from '@/content/series';
 import { pillars, pillarById } from '@/content/pillars';
 import type { Piece, PieceType, PillarId, World } from '@/content/types';

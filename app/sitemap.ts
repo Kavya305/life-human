@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { pieces } from '@/content/pieces';
+import { pieces } from '@/lib/pieces';
 import { series } from '@/content/series';
 
 const base = 'https://lifehuman.example';

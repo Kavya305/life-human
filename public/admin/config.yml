@@ -1,0 +1,176 @@
+# Life.Human — editor configuration
+#
+# The CMS writes markdown files into content/pieces/. Every publish is a real
+# commit to the repo, which then triggers a Vercel rebuild. There is no
+# database and no separate content service; the repo stays the single source
+# of truth.
+#
+# Access is repo access: only GitHub accounts with write access to this
+# repository can log in and publish.
+
+backend:
+  name: github
+  repo: life-human26/life-human-portfolio
+  branch: main
+  # Points at this site's own OAuth handler (app/api/auth) rather than
+  # Netlify's, because we deploy on Vercel.
+  base_url: https://life-human-portfolio.vercel.app
+  auth_endpoint: api/auth
+  commit_messages:
+    create: 'Add {{slug}}'
+    update: 'Update {{slug}}'
+    delete: 'Remove {{slug}}'
+    uploadMedia: 'Add image {{path}}'
+    deleteMedia: 'Remove image {{path}}'
+
+media_folder: public/uploads
+public_folder: /uploads
+
+# Drafts live in the editorial workflow (a branch + PR) rather than going
+# straight live, so nothing is published by an accidental keystroke.
+publish_mode: editorial_workflow
+
+collections:
+  - name: pieces
+    label: Pieces
+    label_singular: Piece
+    folder: content/pieces
+    create: true
+    slug: '{{fields.slug}}'
+    identifier_field: title
+    summary: '{{title}} — {{pillar}}'
+    sortable_fields: [date, title, pillar]
+    preview_path: 'explore/{{fields.slug}}'
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: The handle for the piece. The question below is what readers see first.
+
+      - label: Central question
+        name: question
+        widget: string
+        hint: >-
+          The real subject of the piece, as a question. This is set above the
+          title and larger than it. Every piece needs one.
+
+      - label: Web address
+        name: slug
+        widget: string
+        pattern:
+          - '^[a-z0-9]+(?:-[a-z0-9]+)*$'
+          - Lowercase words separated by hyphens, e.g. before-the-map
+        hint: Appears in the URL. Do not change it once a piece is published.
+
+      - label: Pillar
+        name: pillar
+        widget: select
+        options:
+          - { label: 'THINK — Life.Human Philosophy', value: think }
+          - { label: 'UNDERSTAND — History & Society', value: understand }
+          - { label: 'DISCOVER — Ancient Wisdom', value: discover }
+          - { label: 'QUESTION — Modern Systems', value: question }
+          - { label: 'BECOME — Human Development', value: become }
+
+      - label: Form
+        name: type
+        widget: select
+        default: essay
+        options:
+          - { label: Essay, value: essay }
+          - { label: Film, value: film }
+          - { label: Short, value: short }
+          - { label: Visual story, value: visual }
+
+      - label: Date
+        name: date
+        widget: datetime
+        date_format: 'YYYY-MM-DD'
+        time_format: false
+        picker_utc: true
+
+      - label: Short description
+        name: dek
+        widget: text
+        hint: One or two sentences. This carries the card in the archive.
+
+      - label: Visual
+        name: plate
+        widget: select
+        default: aperture
+        options: [aperture, arch, horizon, manuscript, threshold, orbit, river, column]
+        hint: The abstract plate shown with this piece.
+
+      - label: Series
+        name: seriesSlug
+        widget: select
+        required: false
+        options:
+          - { label: '— none —', value: '' }
+          - { label: Śrīmad-Bhāgavatam, value: srimad-bhagavatam }
+          - { label: Education & Competition, value: education-and-competition }
+          - { label: Today I Will, value: today-i-will }
+          - { label: To Serve, value: to-serve }
+          - { label: Life & Time, value: life-and-time }
+          - { label: History of Bharat, value: history-of-bharat }
+          - { label: Inner Beauty, value: inner-beauty }
+
+      - label: Part number in series
+        name: part
+        widget: number
+        required: false
+        value_type: int
+        min: 1
+
+      - label: YouTube video ID
+        name: videoId
+        widget: string
+        required: false
+        hint: Just the ID, not the whole link. Leave blank if there is no film yet.
+
+      - label: Approximate minutes
+        name: minutes
+        widget: number
+        required: false
+        value_type: int
+        min: 1
+
+      - label: Feature on the homepage
+        name: featured
+        widget: boolean
+        required: false
+        default: false
+
+      - label: Essay
+        name: body
+        widget: markdown
+        required: false
+        hint: >-
+          Write normally. Use ## for a heading and > for a quote. To mark how
+          sure you are about a claim, put it on its own lines between
+          :::fact and ::: — the same works for :::interpretation,
+          :::hypothesis, :::question and :::note.
+
+      - label: Sources
+        name: sources
+        widget: list
+        required: false
+        label_singular: Source
+        summary: '{{fields.text}}'
+        fields:
+          - { label: Source, name: text, widget: string }
+          - { label: Detail, name: detail, widget: string, required: false }
+          - { label: Link, name: href, widget: string, required: false }
+
+      - label: Related shorts
+        name: relatedShorts
+        widget: list
+        required: false
+        field: { label: Piece address, name: slug, widget: string }
+        hint: The web address of each related short, e.g. short-the-pause
+
+      - label: Related ideas
+        name: relatedIdeas
+        widget: list
+        required: false
+        field: { label: Piece address, name: slug, widget: string }

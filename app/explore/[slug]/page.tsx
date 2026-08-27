@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { pieces } from '@/content/pieces';
+import { pieces } from '@/lib/pieces';
 import { pillarById } from '@/content/pillars';
 import { seriesBySlug } from '@/content/series';
 import { pieceBySlug, resolveSlugs, nextExploration, worldOf } from '@/lib/content';
