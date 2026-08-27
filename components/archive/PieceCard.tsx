@@ -33,11 +33,11 @@ export function PieceCard({ piece, size = 'standard' }: { piece: Piece; size?: C
         </div>
 
         <div className={styles.text}>
-          <p className={styles.question}>{piece.question}</p>
+          {piece.question && <p className={styles.question}>{piece.question}</p>}
 
           <h3 className={styles.title}>{piece.title}</h3>
 
-          {size !== 'compact' && <p className={styles.dek}>{piece.dek}</p>}
+          {size !== 'compact' && piece.dek && <p className={styles.dek}>{piece.dek}</p>}
 
           <p className={styles.meta}>
             <span className={styles.pillar}>{pillar.name}</span>

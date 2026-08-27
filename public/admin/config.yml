@@ -46,6 +46,7 @@ collections:
       - label: Central question
         name: question
         widget: string
+        required: false
         hint: >-
           The real subject of the piece, as a question. This is set above the
           title and larger than it. Every piece needs one.
@@ -53,6 +54,7 @@ collections:
       - label: Pillar
         name: pillar
         widget: select
+        default: think
         options:
           - { label: 'THINK — Life.Human Philosophy', value: think }
           - { label: 'UNDERSTAND — History & Society', value: understand }
@@ -80,6 +82,7 @@ collections:
       - label: Short description
         name: dek
         widget: text
+        required: false
         hint: One or two sentences. This carries the card in the archive.
 
       - label: Visual
@@ -133,11 +136,13 @@ collections:
         name: body
         widget: markdown
         required: false
+        # Raw mode only. The rich-text editor crashes on HTML pasted out of
+        # Blogger; a plain box accepts it and the site converts it on build.
+        modes: [raw]
         hint: >-
-          Write normally. Use ## for a heading and > for a quote. To mark how
-          sure you are about a claim, put it on its own lines between
-          :::fact and ::: — the same works for :::interpretation,
-          :::hypothesis, :::question and :::note.
+          Paste straight from Blogger if you like — the formatting is cleaned
+          up automatically. Or write plainly: ## makes a heading, > makes a
+          quote.
 
       - label: Sources
         name: sources

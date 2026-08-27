@@ -28,7 +28,63 @@ const claimKinds: ClaimKind[] = ['fact', 'interpretation', 'hypothesis', 'questi
 const isClaim = (name: string): name is ClaimKind =>
   (claimKinds as string[]).includes(name);
 
-export function parseEssay(markdown: string): Block[] {
+/**
+ * Content pasted out of Blogger arrives as HTML, not markdown. Rather than
+ * ask a writer to convert it by hand, we detect it and convert the handful of
+ * tags that actually carry meaning, discarding the rest of the markup.
+ *
+ * This is deliberately not a general HTML parser. It keeps structure —
+ * paragraphs, headings, quotes, line breaks — and throws away styling, which
+ * is exactly right here: the publication's own typography should win, not
+ * whatever inline styles Blogger happened to emit.
+ */
+const looksLikeHtml = (text: string) =>
+  /<(p|div|br|h[1-6]|blockquote|ul|ol|li|span|table)\b[^>]*>/i.test(text);
+
+const decodeEntities = (text: string) =>
+  text
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/&#8217;|&rsquo;/gi, '’')
+    .replace(/&#8216;|&lsquo;/gi, '‘')
+    .replace(/&#8220;|&ldquo;/gi, '“')
+    .replace(/&#8221;|&rdquo;/gi, '”')
+    .replace(/&#8212;|&mdash;/gi, '—')
+    .replace(/&#8211;|&ndash;/gi, '–')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
+
+function htmlToMarkdown(html: string): string {
+  return (
+    html
+      /* Anything that can never become text goes first. */
+      .replace(/<!--[\s\S]*?-->/g, '')
+      .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
+      /* Structure worth keeping, mapped onto our own syntax. */
+      .replace(/<h[1-3]\b[^>]*>([\s\S]*?)<\/h[1-3]>/gi, '\n\n## $1\n\n')
+      .replace(/<h[4-6]\b[^>]*>([\s\S]*?)<\/h[4-6]>/gi, '\n\n## $1\n\n')
+      .replace(/<blockquote\b[^>]*>([\s\S]*?)<\/blockquote>/gi, (_, inner) => {
+        const text = inner.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+        return text ? `\n\n> ${text}\n\n` : '\n\n';
+      })
+      .replace(/<li\b[^>]*>([\s\S]*?)<\/li>/gi, '\n\n$1\n\n')
+      .replace(/<br\s*\/?>/gi, '\n\n')
+      .replace(/<\/(p|div|section|article)>/gi, '\n\n')
+      /* Everything else is presentation; drop the tags, keep the words. */
+      .replace(/<[^>]+>/g, '')
+      .split('\n')
+      .map((l) => decodeEntities(l).replace(/[ \t ]+/g, ' ').trim())
+      .join('\n')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim()
+  );
+}
+
+export function parseEssay(source: string): Block[] {
+  const markdown = looksLikeHtml(source) ? htmlToMarkdown(source) : source;
   const blocks: Block[] = [];
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
 

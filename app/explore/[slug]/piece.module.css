@@ -59,6 +59,17 @@
   max-width: 34ch;
 }
 
+/* A piece with no central question yet: the title takes the display size the
+   question would have had, so the page never opens on a small grey line. */
+.title[data-lead='true'] {
+  margin-block-start: clamp(2rem, 5vw, 3.25rem);
+  font-size: var(--step-5);
+  font-weight: 300;
+  letter-spacing: -0.026em;
+  color: var(--ink);
+  max-width: 20ch;
+}
+
 .dek {
   margin-block-start: 1.5rem;
   font-size: var(--step-1);

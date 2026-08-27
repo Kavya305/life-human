@@ -74,11 +74,14 @@ export default async function PiecePage({
 
           {/* The central question sits above the title, larger than the title,
               because it is what the piece actually is. */}
-          <p className={styles.question}>{piece.question}</p>
+          {piece.question && <p className={styles.question}>{piece.question}</p>}
 
-          <h1 className={styles.title}>{piece.title}</h1>
+          {/* With no question, the title carries the page on its own. */}
+          <h1 className={styles.title} data-lead={!piece.question}>
+            {piece.title}
+          </h1>
 
-          <p className={styles.dek}>{piece.dek}</p>
+          {piece.dek && <p className={styles.dek}>{piece.dek}</p>}
 
           <p className={styles.meta}>
             <time dateTime={piece.date}>{formatDate(piece.date)}</time>
