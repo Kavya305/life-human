@@ -6,6 +6,7 @@ type: "essay"
 seriesSlug: "srimad-bhagavatam"
 part: 1
 date: "2026-08-08"
+cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh_F8v0Fa9_lhzApURmP5TNtf_7XVBjilkhL1-odmknviL2i7otPuGaNFIHOJQi7GzR2aYsN8JTB8ok0XXbQza7BM-jXPN6gZ8p-8HhYDaygg11z-6uJCrwFWcnEQ9Mj-50u_O5clqbnFCgkj6AqoVKijD-IkA6EhSd0h0rFF0G0ZS_pj2dGHaRVUxa3w/s320/Bhagvat%20Part1%20-%2001.png"
 plate: "manuscript"
 minutes: 2
 ---
@@ -96,6 +97,8 @@ Synthesis of Bhakti-Yoga, Advaita
 (Non-duality), and Sankhya
 
 ##
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJJH9i4F676GRWT4rCzkoQHjTZ3vyPipeatfUkG_s7sshgWLjQ3ZvIZQi2Fv3h0fuhAXFu3uTP46Qi8NBJx1is2A5GQTp7ToBudGo1qUtdRtAIUQSLcvzgAfIxNu17y8v72fdIkldA0jkE9pNCZEE6bg3gA4SgXEpZiLB1Fr53nfs_0dAuSH4MhqRs9kI/s320/Life.Human%20Picture.png)
 
 ## Life.Human
 

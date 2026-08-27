@@ -6,6 +6,7 @@ type: "essay"
 seriesSlug: "srimad-bhagavatam"
 part: 4
 date: "2026-08-28"
+cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmnIkgJnlTxWp2ODpecNfPLdC4B2zd8FNw2QLh49s862ovaLxLgY73nb4FBTk_yhG0mr6dHeSBTpv81Yz-_ZtiFmOiPAcVwaq6WNFCnx4bgSwQFV8sNF-c1byUQ1yxkdWqS5swhG10uI-Dr0uG0RFFaszTLBfy15afp8mw-1TeHuMunbUgThBKkCLIRHo/s320/Birth01.png"
 plate: "manuscript"
 minutes: 17
 draft: true
@@ -79,6 +80,8 @@ He appears.
 
 ## 2. What Did Vasudeva Actually See?
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1jWVZKuQqsRh08Zu3qqt5Xc-yHcWrT5L0OXZSP6z2va99NACnwHWO95_V9DBU0gC-JcpHt5EjQN5bdVCW3Xzwt4Zcdnpot56tpNqzuHOExEiPxa4L9iheZa8oF8OIzoJUTSbi4P-9VHR14bW6tsBOZefFDC3kK3CnmzOQvMtzhB1oCPLLyMZLI9MnTGQ/s320/Birth02.png)
+
 The next verses make the scene extraordinary.
 
 Vasudeva sees a newborn child, but this is no ordinary newborn.
@@ -151,6 +154,8 @@ He is looking directly at the Divine in a recognizable form.
 
 ## 3. Vasudeva Recognizes Him
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkuvr_nFu65wyQW0Ukv9EuVMiS4kk-oLknKcfvmmpKUAflM0h8Eb8-OtycVvKbqE2XqYJlqP_jjie_XWqf4iRfB1NamXOuf79Klz7XqjMOWyQq18lqFGg63uoppegE-Yr_cy6lQ3k6CfU4Y_15HDeIcHrnyMFbrqWba-hyXbSv29qQmmRSWBgePYSl-co/s320/Birth03.png)
+
 Vasudeva's reaction is immediate.
 
 The Bhāgavatam says that when he saw his extraordinary son, he was filled with wonder and transcendental joy. He mentally celebrated the occasion by giving ten thousand cows in charity to the brāhmaṇas.
@@ -176,6 +181,8 @@ He recognizes something much greater.
 The child before him is the Supreme Reality.
 
 ## 4. Vasudeva's Prayer: The Supreme Beyond Material Nature
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEginr8bZoZMfM0yAK0wGG8kzA6znr9ryJla8-d-onONppRp9oWtimA2SiF427J9fN2HjYhRa2kRxIMOaR0ZjysPLKTqijpmMDl9EFePbfpqadLSjNtl4R8HE6RfkXrbrtvXTgdjZbKUVmEtfPVjgcPJZD6MEv8dR6QXnYXIP-sjnHERvcQ6T_Fpp2RsQkA/s320/Birth04.png)
 
 Vasudeva's prayer now moves from narrative into philosophy.
 

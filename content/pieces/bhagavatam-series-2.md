@@ -6,6 +6,7 @@ type: "essay"
 seriesSlug: "srimad-bhagavatam"
 part: 2
 date: "2026-08-18"
+cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3svx6mY_3MHZ89vsFhIAq50RoP8H9KWhHMHeHRRETFxIIG7ZE4JZOTJ36tD3XCZWxTOsz3P8gPrxCtotFIBBzORtJlUEWQqwj1aSnFLqEmOUu_lRN5LcR43A85xzR-_OnOe8h99tZOrFzQEOGbXcu6REosZYP4bjpXtLcOzC7CGxSPHpNsOwyP5M4lFo/s320/Maha%20Vishnu.png"
 plate: "manuscript"
 minutes: 8
 ---
@@ -68,6 +69,8 @@ This is therefore one of the clearest places in the Bhāgavatam tradition for un
 
 ## 2. Kāraṇodakaśāyī Viṣṇu — Mahāviṣṇu
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBSVZlEJ6F-knX4_dDAbH-Tnmlx0eoC-vncuB8Z0FpHzWmhPTShigsC1SvggObCpVSCWBeh5mD_6TZF-DFQjoE3al9KiuyaA-ZWzy-GmehTO6JUdJpr-G5XVDrG8DpEXTt4zA_5D_62yGVRCepZ1BUvUeEiCy4RI2Vyx9ksiYIrvwhDgPtUnr3UvVT6JA/s320/Karanodakasayi%20Vishnu.png)
+
 Sri Karanodakasayi Visnu in Karana Ocean.
 
 The first is Kāraṇodakaśāyī Viṣṇu, commonly called Mahāviṣṇu.
@@ -89,6 +92,8 @@ This gives us the first transition:
 Mahāviṣṇu → countless universes
 
 ## 3. Garbhodakaśāyī Viṣṇu — the Lord within each universe
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYKCXtqbUmpblD5wGWM9pbNIbKTtTZJSvU0nVgm_RS4H5tB6_L4VOPbKywMhIKawjDB-oG-DtQCKNFoMB0qoGHMYJyAHdW7z79qIO-UUJkg03vdV5-ELNHVl0tkPbsXbkQDaVvyF2xv9niKS4SJwHPgTHBRgQ_o45djMIT1AOmvz78uDy93MEypIaWh7Y/s320/Garbhodakasayi%20Vishnu.png)
 
 Now the scale becomes smaller.
 
@@ -123,6 +128,8 @@ Brahmā is the creator within the universe, but the Bhāgavatam places Viṣṇu
 Brahmā performs the work of universal creation; the source and foundation of that universe is Viṣṇu.
 
 ## 4. Kṣīrodakaśāyī Viṣṇu — the indwelling Lord
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggrRhEyeDJF5bUGqw3Ts-3pz_Oje_-Dr7XPZNKWFfUI-k7jJQ-HRSuWCXpHkIoCpsK8snRlfjA9rts1pIxj0zflKAV2xtgmQ6Pr3vfJ_tT8IjLbGDZeb2Xr_nukhFkFH2s6uCQbuvM0_pEDjUPRhL-2M52eks9oE6Bb5BEbW6GTwAWdu7oOlNa36lU_Ko/s320/Ksirodakasayi%20Vishnu.png)
 
 Now the Bhāgavatam takes us even further inward.
 
@@ -315,6 +322,8 @@ From the unimaginable scale of countless universes to the quiet space within the
 The names Kāraṇodakaśāyī, Garbhodakaśāyī, and Kṣīrodakaśāyī Viṣṇu belong to the established Vaiṣṇava theological vocabulary used to explain the Puruṣa manifestations. When presenting this subject historically or academically, it is therefore best to distinguish between the Bhāgavatam's verses themselves and the commentarial/theological explanations built around those verses.
 
 That distinction makes the article stronger—not weaker—because we allow the reader to see exactly what the Śrīmad-Bhāgavatam says and then understand how the larger Vaiṣṇava interpretation develops from it.
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOBxkiKXSK_KvVvNF4x6qJ2gL4CzBlC1tZWy6ma-TQpv2v2_ngwKbGo88JUzEeSQA9_LTBQe4Ab8QhkWUptyTcwgdjqAF1oERp3WK9z_SHENWBfuZn6zvoLo17xSWWoXXyLThCnK4qkknKaWLsQNiajls2_0AOOgPtjNo5oCN8o_Gfgl3XKQzxqqvVfuU/s320/Life.Human%20Picture.png)
 
 ## Life.Human
 

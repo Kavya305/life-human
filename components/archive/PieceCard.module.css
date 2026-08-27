@@ -28,6 +28,13 @@
   aspect-ratio: 3 / 2;
 }
 
+.cover {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* A slow, small drift on approach. Not a zoom — a breath. */
 .plate > :first-child {
   transition: transform 1.4s var(--ease);

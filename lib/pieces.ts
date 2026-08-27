@@ -73,6 +73,8 @@ function readOne(file: string): Piece | null {
     date: str(data.date, '1970-01-01').slice(0, 10),
     dek: str(data.dek),
     plate,
+    ...(str(data.cover) ? { cover: str(data.cover) } : {}),
+    ...(str(data.coverAlt) ? { coverAlt: str(data.coverAlt) } : {}),
     ...(str(data.videoId) ? { videoId: str(data.videoId) } : {}),
     ...(typeof data.minutes === 'number' ? { minutes: data.minutes } : {}),
     ...(essay.length ? { essay } : {}),

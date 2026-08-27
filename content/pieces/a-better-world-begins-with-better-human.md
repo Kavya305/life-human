@@ -1,11 +1,12 @@
 ---
 title: "Creation Series - Part 02 The First Movement Toward Creation - Prakṛti, Kāla and the Beginning of Manifestation"
 question: ""
-pillar: "discover"
+pillar: "think"
 type: "essay"
 date: "2026-08-16"
-plate: "manuscript"
-minutes: 8
+cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeCxqZGyLVxcPyfFiw2AjQDaSSqJAMdJl3uFXTy9WX3hijcMSC1caARaDY0R1yJI51ngtwWLWKvHj8wfJfFCx0R4FM5fBE7oxnbSebfB8S-fE3NqECDlaDcSnlzFXAa44WCqBxmyQcNGiEGXiKwb0PTX6f0kXrWm-8ghEhdFx-zR6craOoXxKvF3C_L9c/s320/The%20first%20movement%20towards%20creation.png"
+plate: "aperture"
+minutes: 9
 ---
 
 A better world begins with a better human.
@@ -17,6 +18,8 @@ Creation Series - Part 01
 Video - Creation Series Part 01
 
 ## Blog 2 — The First Movement Toward Creation
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfs2XH7BanXcToBPUygiT2M0H3K1lVWVgo4YJuODR5VXzrc_R1m5xV1sSvFKfx_LMkvTSEGPei-bcN43XAx__6oRN6K2hidcB-PmoyRCV-b-XFY6tb_S65Iz_4hCM-dMFTUZo2ZdkNzuB_05TSLZvAd-FdKlngNeoMQtbIVVII1Ja7KiydlsqBlxBVnco/s320/The%20first%20movement%20toward%20creation.png)
 
 ## Prakṛti, Kāla and the Beginning of Manifestation
 
@@ -33,6 +36,16 @@ If everything was unmanifest, what was the first movement toward creation?
 The Bhāgavatam gives us a profound answer involving Prakṛti, Kāla (Time), and the Supreme Puruṣa.
 
 ## 1. Prakṛti Before Manifestation
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3HaYYm9wFnZsM1FJTDTmVrQ6puoCieKz2EFOjw55E6UFDNpLApJ0w_5Ktf-Ry7RZDhXq9r7QxmUZ6iWeUKPGrz1tTcYFOTRk2RJ9xyAeURCwIwiMtae89LBUpOguIabAe_MMWEJwvbh6r2hQZ3P-4QJe8dA0RklVjWndxu9tJEFGXE3fvitLfC1JSRIc/s320/creation-02-01.jpg)
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFUgWyRGptop4STpihbNhyApc__ijSukRtmnnoDgUr4yWgJNy14efRIVMVBPrRm4QHqkHlqzM1h7LGS_cy7lDW1uYClppYx00ItIDKsoCCkMbashcCDRj856251f1qzDI54FIQzLzA6-eYiu-OeZOPaMW_CibJySwcjoQDlqjyAF_V7DT_JmUUVsfac10/s320/creation-02-02.jpg)
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkxP2E72Tk2cYLBS66pTHGCdn-6_tK7ySER3Lbs9A_DRm33H5Ema8AkwXGPk09fcLEiDnwmM54UBa5fRTF7mKWl9dFvJqVeLw2oZ0zS7ray_PYLXQi5kBrHfYUUR8duBQcaS9Yti19jWXrBSGT0hT3CooQYqXBeDYmuT4-Fe5r4n3cWQS_i4Ee5yzN5zQ/s320/creation-02-03.jpg)
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgq0zw6Pwy7idRBJV2juFl10hEYZSvjM61UfVnNe2DVPFiaC2n0x6_5v0TTxtfG_6Eu9pXhehAjdc91xrcU6oI2sxdQf0jDecwEt1NgD4fqiDzLFRNTe1Kfv3inRKqhS7FHpQYGkXgpqG5jOLmi1eaFa2Dn4c73Nhna0YnIksmFAPuGWQ2e-Tq_G38zJ98/s320/creation-02-04.jpg)
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj8nPDZZ6tXEyDsAiNyYkGDow6EvYidbp69zg1D24Y3EvFxoAHoL1AdeiFjmPLWMb2JhC6io0EYhz7Xg3hxe-2H5iZ5tr5WidTLsGJjwONlIf5V6pWcCT6GghFBcmdcjn4ykJkgX7_kezyGcbs3h9dEox49eZFQUHYR9573WwUWqO8Pgf6hivw9pVoHP2c/s320/creation-02-05.jpg)
 
 Before manifestation, Prakṛti remains unmanifest—the potential
 
@@ -173,6 +186,14 @@ The universe is not yet the universe we see.
 But the process of becoming has begun.
 
 ## 7. The Next Stage: Mahat-tattva
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfs_VwXZdMEq2a4CU42JZg7fPI2EdT5ZuhX5h8SRYDZb1mU39820SC9blJZT5Y78CwlL5bg0LzktEmCdKJ25aU-VbvOo4qXreNz35d6m45vw997LAXqc76Y5_hrgalox4Xb02GTc49B3SGgqELGtmnXAy4TqpRIhan_26-xuCmkmGJF7VecpcChe5E0Gs/s320/Mahat-tatava01.jpg)
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxc75LlCWaIPSvkxpZNsOLVb26J77Pf9mp60pGQSylFyW6bn9pNlPxllx9BmHXzHRSlFg5RIjDt2A2IOEMeeOhVJDAo48Fx46fWsfOfqsjC_uDedGqS99uCy2-trgV3caF_Aq2WzikcspUjya8p2OD0S25tW5iTfh1hsbXoXbKeouboScLAX8SaBW3Ac0/s320/Mahat-tatava02.jpg)
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQbobw69H5m_s2igjZTPwUkQWbwHlpAe-vpavjpBXkvnlvY_wWSTnWoEX9DkNVPLn4ReBwxWMgqeu-G650Xt5Ak4YVekn0rbWeE902SAe3LVwthEZ_tWw8NS_9KBW0_EGyPt-HbVfLoCqB16_jo6LGLd9AkRZpuJ2KB9Us45nTK7u0_l0pOEphSwNXRgg/s320/mahat-tatava03.jpg)
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtmVsg4B9unzaFzDTuD2QsYZwLbCDcgvMuqMLvVJWQ8bSxQH90YJHoZEz923Qhb8kmuxwCvcWy8s68malvhhTFUufm36bSi8jb4CoFAPQqgWHL8CLQVTs7HGKrz_H4nhAWpfoCUTS0ZFM1VfId7UMrFwSFGSCmLn_oapgB1kYoJUOmU8s8YpD_O8RXxNc/s320/mahat-tatava04.jpg)
 
 Once Prakṛti is set into activity, the next major stage is the emergence of Mahat-tattva, the cosmic intelligence.
 
@@ -352,9 +373,13 @@ And in the next blog, we will enter that movement more deeply:
 
 ## Blog 3 — Mahat-tattva: The Birth of Cosmic Intelligence
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOeKgwEwqEBAeF7apJEiP3S5B30t-TSyTuA_a2BpNDBIva2cCBq0I7S1FjYZR-0ebekXS8NfmR38a7fxgoYliDQzPzM2elZ_huCE3IUNxfEW-FzcLPfO7sXF6WN-qT0x5GqyT8echaIl8xRI6P4yBPd0L2vntu9h_MnJoDiyohc8ntWcTU7H2Szmt3Oms/s320/mahat%20tatava%2002.png)
+
 There we will ask:
 
 What exactly is Mahat-tattva, and why does the Bhāgavatam place cosmic intelligence so close to the beginning of creation?
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgt1b2hhSMHDHkPI37trs-gxVvGxqdWPSfzPKk8mHRBRHz9oaoBl-9nAv8akEFGHwZX808WlHhdHVOXt0eaeDraQIF6ygxW5ZNtKlIQ-FDkjNQFskBoTEGlmmpP1d_KDVBngjiOrrOZsdfuFceFth6X3yG2vy2DDzNNZWFcnLr2BqP00OzqgtyPGY0mPAg/s320/Life.Human%20Picture.png)
 
 ## Life.Human
 

@@ -5,6 +5,7 @@ pillar: "question"
 type: "essay"
 date: "2026-08-19"
 dek: "Why has becoming a doctor become such a powerful aspiration in Bharat? This article examines NEET, medical-seat scarcity, parental ambition, status, m"
+cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi7rOH_80FKwKOwVEKfAwK4QWthFCfsMJyzRy9egp8g3-Wcs8VXiKfFsW9-kk9pB1IzaGNQG-178pp1TsMREngofAEUBbltVheTwuVnSCHl6H_tRBlAFwMHyNlOiLMeuj9cu8ZEotGHP2_VskwB_G4qi5fdLvFzKS0ZXuJfwP3UqG7-iBgV6oTUBmZjSRs/s320/ChatGPT%20Image%20Aug%2019,%202026,%2005_42_37%20PM.png"
 plate: "orbit"
 minutes: 4
 ---
@@ -140,6 +141,8 @@ Because if we want different behaviour, perhaps we need to create different ince
 And perhaps that is the real question NEET is asking Indian society:
 
 ## Are we producing doctors—or are we producing a competition for the status of being a doctor?
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhw69xdBqV4121D6LLftozq_aMhHZG9KMRyVRD-fZp6SJf71cs3ZQwBEd2HewNUhzaLHJ9e-vKUzBDJvHcCuNbUztkg2oGj9BX_RKiuP4YftiW9Vwmr3AFUhdF1X4nEFmXCObGF4orIvV3mRAWCwAAZU58mXBdUH1RqAu7HqD_rZYPab7mHuR2MDY81Gls/s320/Life.Human%20Picture.png)
 
 ## Life.Human
 

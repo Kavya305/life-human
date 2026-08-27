@@ -8,3 +8,27 @@
   font-style: italic;
   text-wrap: pretty;
 }
+
+/* Pictures break the reading measure and run to the full column, which is how
+   an editorial page treats them. */
+.figure {
+  margin-block: 2.75em;
+  margin-inline: calc(-1 * clamp(0rem, 4vw, 3.5rem));
+}
+
+.figure img {
+  inline-size: 100%;
+  block-size: auto;
+  display: block;
+  background-color: var(--ground-raised);
+}
+
+.figure figcaption {
+  margin-block-start: 0.9rem;
+  margin-inline: clamp(0rem, 4vw, 3.5rem);
+  font-family: var(--sans);
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--ink-3);
+  text-wrap: pretty;
+}

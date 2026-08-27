@@ -28,7 +28,17 @@ export function PieceCard({ piece, size = 'standard' }: { piece: Piece; size?: C
     <article className={styles.card} data-size={size} data-pillar={piece.pillar}>
       <Link href={`/explore/${piece.slug}`} className={styles.link}>
         <div className={styles.plate} data-world={pillar.world} data-paint="">
-          <Plate variant={piece.plate} />
+          {piece.cover ? (
+            <img
+              className={styles.cover}
+              src={piece.cover}
+              alt={piece.coverAlt ?? ''}
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <Plate variant={piece.plate} />
+          )}
           <span className={styles.type}>{typeLabel[piece.type]}</span>
         </div>
 

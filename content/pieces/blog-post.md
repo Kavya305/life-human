@@ -4,6 +4,7 @@ question: ""
 pillar: "understand"
 type: "essay"
 date: "2026-07-31"
+cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguoXfME9p5HUYWBNnf20Gb3upa6fpsoQ29auqzPMFVy6UrMfaSlE7oMp0OEvTKfsO7KdZA_GYV3Hz93xul98vrFoI74MCa4OW00AqMnio_qYZS7DtT27rZB68rlHqZl5fHgfze5KD_n1EkMwvaj7R4QeAMbwkSt4eXoyUVn1zYnwVzQK-xAFuUuT4YLJ0/s320/banner%20-%20pun.png"
 plate: "column"
 minutes: 4
 ---

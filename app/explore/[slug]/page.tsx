@@ -95,7 +95,17 @@ export default async function PiecePage({
         </div>
 
         <div className={styles.heroPlate} data-world={world} data-paint="">
-          <Plate variant={piece.plate} />
+          {piece.cover ? (
+            <img
+              className={styles.heroImage}
+              src={piece.cover}
+              alt={piece.coverAlt ?? ''}
+              fetchPriority="high"
+              decoding="async"
+            />
+          ) : (
+            <Plate variant={piece.plate} />
+          )}
         </div>
       </header>
 

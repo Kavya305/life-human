@@ -85,12 +85,30 @@ collections:
         required: false
         hint: One or two sentences. This carries the card in the archive.
 
-      - label: Visual
+      - label: Main photo
+        name: cover
+        widget: image
+        required: false
+        choose_url: true
+        media_library:
+          config: { multiple: false }
+        hint: >-
+          The picture at the top of the piece. Leave it empty and a plain
+          drawn panel is used instead.
+
+      - label: Describe the photo
+        name: coverAlt
+        widget: string
+        required: false
+        hint: >-
+          A short description for readers who cannot see the image. Skip it
+          only if the photo is purely decorative.
+
+      - label: Panel (used when there is no photo)
         name: plate
         widget: select
         default: aperture
         options: [aperture, arch, horizon, manuscript, threshold, orbit, river, column]
-        hint: The abstract plate shown with this piece.
 
       - label: Series
         name: seriesSlug
@@ -145,13 +163,13 @@ collections:
         name: body
         widget: markdown
         required: false
-        # Raw mode only. The rich-text editor crashes on HTML pasted out of
-        # Blogger; a plain box accepts it and the site converts it on build.
-        modes: [raw]
+        # Raw first, because the rich editor crashes on HTML pasted out of
+        # Blogger. Rich mode stays available for its image button.
+        modes: [raw, rich]
         hint: >-
-          Paste straight from Blogger if you like — the formatting is cleaned
-          up automatically. Or write plainly: ## makes a heading, > makes a
-          quote.
+          Paste straight from Blogger here — the formatting is cleaned up
+          automatically. For pictures inside the essay, switch to the rich
+          editor with the toggle above this box and use its image button.
 
       - label: Sources
         name: sources

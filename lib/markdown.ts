@@ -71,6 +71,13 @@ export function htmlToMarkdown(html: string): string {
         return text ? `\n\n> ${text}\n\n` : '\n\n';
       })
       .replace(/<li\b[^>]*>([\s\S]*?)<\/li>/gi, '\n\n$1\n\n')
+      /* Pictures survive as markdown. Imported posts keep pointing at wherever
+         the image already lives; uploads point into /uploads. */
+      .replace(/<img\b[^>]*>/gi, (t) => {
+        const src = (t.match(/\bsrc="([^"]+)"/i) || t.match(/\bsrc='([^']+)'/i) || [])[1];
+        const alt = (t.match(/\balt="([^"]*)"/i) || [])[1] || '';
+        return src ? `\n\n![${alt}](${src})\n\n` : '\n\n';
+      })
       .replace(/<br\s*\/?>/gi, '\n\n')
       .replace(/<\/(p|div|section|article)>/gi, '\n\n')
       /* Everything else is presentation; drop the tags, keep the words. */
@@ -114,6 +121,26 @@ export function parseEssay(source: string): Block[] {
         if (isClaim(name)) blocks.push({ kind: 'claim', claim: name, text });
         else blocks.push({ kind: 'aside', text });
       }
+      continue;
+    }
+
+    /* ![alt](src) — a picture, optionally followed by an italic caption line */
+    const image = line.trim().match(/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)$/);
+    if (image) {
+      i++;
+      let caption: string | undefined;
+      const next = (lines[i] ?? '').trim();
+      const italic = next.match(/^[*_](.+)[*_]$/);
+      if (italic) {
+        caption = italic[1].trim();
+        i++;
+      }
+      blocks.push({
+        kind: 'image',
+        src: image[2],
+        ...(image[1] ? { alt: image[1] } : {}),
+        ...(caption ? { caption } : {}),
+      });
       continue;
     }
 
@@ -174,6 +201,10 @@ export function serializeEssay(blocks: Block[]): string {
           return `:::${b.claim}\n${b.text}\n:::`;
         case 'aside':
           return `:::note\n${b.text}\n:::`;
+        case 'image':
+          return b.caption
+            ? `![${b.alt ?? ''}](${b.src})\n*${b.caption}*`
+            : `![${b.alt ?? ''}](${b.src})`;
         default:
           return b.text;
       }

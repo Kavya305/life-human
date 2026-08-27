@@ -74,7 +74,10 @@ export type Block =
   | { kind: 'quote'; text: string; attribution?: string }
   /** A claim, labelled with its epistemic register. */
   | { kind: 'claim'; claim: ClaimKind; text: string }
-  | { kind: 'aside'; text: string };
+  | { kind: 'aside'; text: string }
+  /** A picture in the flow of the essay. `src` may be a local upload or a
+      remote URL carried over from an import. */
+  | { kind: 'image'; src: string; alt?: string; caption?: string };
 
 export interface Piece {
   slug: string;
@@ -91,6 +94,10 @@ export interface Piece {
   /** The short philosophical description that carries the card. */
   dek: string;
   plate: PlateVariant;
+  /** A photograph for the top of the piece. When absent the plate is used. */
+  cover?: string;
+  /** Describes the cover for anyone who cannot see it. */
+  coverAlt?: string;
   /** YouTube id, when the film exists. Absent renders a waiting state. */
   videoId?: string;
   /** Roughly how long the written piece runs, in minutes. Never shown as a promise. */

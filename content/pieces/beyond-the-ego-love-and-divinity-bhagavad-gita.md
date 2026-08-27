@@ -4,6 +4,7 @@ question: ""
 pillar: "discover"
 type: "essay"
 date: "2026-07-28"
+cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhx3oEk0MkAeIChwNE5C9QzOnYOEeA-91-ZsZiGN9rTp375CKJ70jvaZCZhNnxNHovibN2sr3tdM371qktHyGHf2cRde2-B-nfYsbVOiPrK9HLacxsh73hR7z6am-8du7AfC394iarh3vbQGOdCaq1DBMBwbnWMVEl7tEPfZGK1RIDlzUtfr6D4zlc1yhQ/s320/ChatGPT%20Image%20Jul%2028,%202026,%2001_54_01%20PM.png"
 plate: "manuscript"
 minutes: 5
 ---
@@ -54,6 +55,8 @@ The Gita’s lesson is more radical: Narayana isn't a visitor who might drop by 
 
 ## 6. From Judgment to Worship: The Transformation of Vision
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEis94S6kX-htbVTgncZ_mEK1RkZKt2W7BEzEWH694OJnNePrOnCT1YH1_P5fHEWRRL5nUZBewTPQcBmm2N05_goN9Bdh5biz0tkPk8h4GYt-XnRQ1bT5jQlPAjMCFSygX74V7gGDrnUw6ITZcYXgOk6WcAq0Q-y38Gn-aJbFUHAnsBSwkiEUEv440QBxcw/s320/ChatGPT%20Image%20Jul%2028,%202026,%2001_41_48%20PM.png)
+
 When we integrate these lessons, our daily interactions undergo a metamorphosis. We begin to live the wisdom of BG 6.30, where Krishna says: "For one who sees Me everywhere and sees everything in Me, I am never lost, nor is he ever lost to Me."
 
 As our vision expands to see the Divine in the tree, the animal, and the adversary, the "distance" between us and God vanishes. This is the ultimate transformation:
@@ -71,6 +74,8 @@ The world doesn't change first; our vision does. And when our vision changes, li
 The journey of the Gita is a path from the ego’s isolation to the soul’s inclusion. By recognizing the one current flowing through every bulb and the imperishable light within our disposable world, we move from a life of lack to a life of spiritual abundance.
 
 As you step into your world tomorrow, carry this question with you: How would your heart respond if you assumed that every person you met—the difficult colleague, the tired cashier, the silent stranger—was a living, breathing temple for the Divine?
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4i3XWT0F21j681M8b82HxHWa1faalTx48SyY5L3iwlHHXoDsVuZ7-ihyphenhyphenMZAA-1Dy_AqS8t4vcOvCH3no3T0r8HOGINC9w1Q8I7sjTum8Yo6F1JcOH-nGYMSW1g86SlkSrjgUUafcMY5kEDwrr7J00Jl6R3nJFPsqi4vlrIW1j9IBkU5XJmLpGH_FQwfc/w370-h246/ChatGPT%20Image%20Jul%2028,%202026,%2001_38_51%20PM.png)
 
 Reflection
 

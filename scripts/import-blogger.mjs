@@ -163,7 +163,18 @@ for (const feed of feeds) {
     const labels = (attrOf(e, 'category', 'term') || '').split('\n').filter(Boolean);
     const filename = tag(e, 'blogger:filename');
 
-    const body = htmlToMarkdown(html);
+    let body = htmlToMarkdown(html);
+
+    /* A post's first picture becomes its cover, so the archive shows the
+       writer's own photographs rather than a wall of drawn panels. It is
+       lifted out of the body so it does not appear twice on the page. */
+    let cover = '';
+    const firstImage = body.match(/^!\[([^\]]*)\]\(([^)\s]+)\)\s*$/m);
+    if (firstImage) {
+      cover = firstImage[2];
+      body = body.replace(firstImage[0], '').replace(/\n{3,}/g, '\n\n').trim();
+    }
+
     const plain = body.replace(/[#>*_]/g, ' ');
 
     const isDraft = status !== 'LIVE';
@@ -205,6 +216,7 @@ for (const feed of feeds) {
     if (part) fm.push(`part: ${part}`);
     fm.push(`date: ${q(published)}`);
     if (dek) fm.push(`dek: ${q(dek)}`);
+    if (cover) fm.push(`cover: ${q(cover)}`);
     fm.push(`plate: ${q(PLATES[pillar])}`);
     fm.push(`minutes: ${Math.max(1, Math.round(words / 200))}`);
     if (isDraft) fm.push('draft: true');

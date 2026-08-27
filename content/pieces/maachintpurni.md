@@ -1,10 +1,11 @@
 ---
 title: "Maa Chintpurni: History, Legend and Religious Significance"
 question: ""
-pillar: "discover"
+pillar: "understand"
 type: "essay"
 date: "2026-08-12"
-plate: "manuscript"
+cover: "https://images.openai.com/static-rsc-4/0bMpOgH-KS6i2CdOZt3KlsmLXOFWrZgMknRpw227glur8WBBjx8klSgxBVyJZ5yQR7YhoHi1pU1bUksDcMiLVV_JJPJjdoZRHVuH40uHY4elh85MmlCb9nXndpixE3N-M9InkUCl61kptwTE_DU-zSGW_4_Aklz5xHO-ulfDAeK8DDBRnkZfYrbjmTuZC0nv?purpose=fullsize"
+plate: "column"
 minutes: 11
 ---
 
@@ -15,6 +16,12 @@ A better world begins with a better human.
 ##
 
 ## Maa Chintpurni: History, Legend and Religious Significance
+
+![Image](https://images.openai.com/static-rsc-4/t8LaPJA-QZf4LA1tgvldW6zHE_3e2H1zHm7vZRCHw3yIi3587Pke4QL0IOqGccB_paIG3Gdawbiumuta1yfOkm7W6p_F_VtOrz5GPOIrYtwaFqCmDpl2oqpBSj6cIq5FFqjdZCFGkZ9GPVpelSAk4mjT12uKXYo8lWRu3I5LR884BuNSDvSZodoZRiqY_Ese?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/58TB-EHeOl3wNqDtIlfVHm6iqYbNt96nsIgVDm1Sgdf9K6Q1OT2Ga7yoClu75MlEntVjF4W0kd17e36sN1qa_rvY1eNYLrrj_LhjxY7vAt15w2tG7PpiFoOkrlk8S9XnL3USu87RCJidyCq5Jxc7pRw3b7DT914d9Tc0JXEOKpe9m7Fr-ZLIhT1YfrNaV1Bl?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/n78bemAamWzhZhHHWM6oe06bEI6WBHdxUm39-IEP-y5bRcmYRtvmDyXzZHsT6DWO25RxNwbJa2FsuldYJc7Mxydb2o191sS3qd3TYdQvG8LerP0z7v05OT3QX29Fy3bHU63Kz8bl2DkO1pSJ7WfSIVhk1Z5jukGgMe0ymE4XMLGEC7nCBTLDuyBo1V4n3bEa?purpose=fullsize)
 
 Among the great goddess shrines of northern India, Maa Chintpurni occupies a particularly important place in the religious landscape of Himachal Pradesh. Situated in the Shivalik hills of present-day Una district, the shrine attracts pilgrims from Himachal Pradesh, Punjab, Haryana, Jammu and Kashmir, Delhi and other parts of India.
 
@@ -353,6 +360,8 @@ Jai Mata Di. 🙏
 ## Sources
 
 The historical and contemporary details above are based primarily on the Government of Himachal Pradesh, District Una, which provides the official description of the shrine, its location and traditional fairs, supplemented by historical/religious reference material. (District Una)
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5BuUkHhFzH0JXNnZ6HSc3c7P2wW4BAu7sYIvd9l2yQBdq-4TVxJ4HOLkrRGt3KO2H6jUsZuTguuu4lGlPfEhwtx07ZKXL6YyrITIWbP_bmZ-bk92Q1DXWdyo2P5yEsudYvu8uWFyTZWpQXeKr70PAyNSBkBPsb4klPXgjMt_sfCowstAr4AAQ0HrU6VI/s320/Life.Human%20Picture.png)
 
 ## Life.Human
 

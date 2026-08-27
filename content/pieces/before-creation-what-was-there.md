@@ -4,6 +4,7 @@ question: ""
 pillar: "discover"
 type: "essay"
 date: "2026-08-13"
+cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwICrTh6AVPkOTrEIkzzwOOCwKPuvDx64k7mzO946tuFY-jeNmrrGA5I53pKKv_ETvyouP-1d3FLEluwr2YySZjl8zJjXR4-7CepfTViisO7jbqe9ZuE-F_nlt5tVefQE_jgaExuKxe312340793Om51glBGTwsHmBLXYqKbabOLQ1I7-vizpYuxKmbg8/s320/ChatGPT%20Image%20Aug%2013,%202026,%2004_24_02%20PM.png"
 plate: "manuscript"
 minutes: 11
 ---
@@ -23,6 +24,8 @@ How did the universe begin?
 We may imagine a beginning somewhere in the distant past—perhaps a first explosion, a first particle, a first movement, or a first moment of time.
 
 But the Śrīmad-Bhāgavatam asks a question even deeper than that:
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEge6dUxVqe7KFbrUjP_QX2fIQQ7VlBvOhxE6SFxAPDSmW8k79TL2UQerL_SZH595ghirbwo_-y5vTQnPAEdv38EFQt1ESMkjjtgf5YqsBLyip8sActNv6WPStx63x4slmLRqK5l3iHwg7mrU7gngFZX9foDLhHdbbjXEEFek3ipzPvEex041I0I_zj0XCw/s320/Creation%20Vlog01%20-%2002.png)
 
 Before there was a universe, what was there?
 
@@ -47,6 +50,8 @@ It begins with the Supreme Reality.
 ## 1. The Bhāgavatam begins with the ultimate cause
 
 The very first verse of the Śrīmad-Bhāgavatam establishes the foundation for everything that follows.
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheTiyzm07VwzYKL_yUw-hJ2J14WsaiAKex6-9c_Yxvyir-rsq-L7mN6JH89wpGfcpPv4dyfb9AqiL6PZdhomWH-gvkmJcVIAEjXtLZUjAs8paTSu1mHppOu9hj2-flM2aBLyMB2d4Y_MVLo8kRyAx-y4lW3zkrkqFNUzXK4TF5D78oYIQiwqHixx0p1nY/s320/Creation%20Vlog01%20-%2004.png)
 
 ## Śrīmad-Bhāgavatam 1.1.1
 
@@ -75,6 +80,8 @@ This distinction is fundamental to understanding everything that follows.
 ## 2. The clearest answer: "I alone existed"
 
 The most direct answer to our question appears in the revelation given by the Supreme Lord to Brahmā.
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6kzzFRBQbMTcVd0CpinrFm9r-CHmsuhE1NAdsRtaRPlH4-8c1asxgLuK505WVXalKgguI4f4gxjK_Ei9MJN6FuWLJAIdd-1l6ErNJqY4GT6VB3ejEJ74bZWOuXodVeWW1wjRIteLedgzxTaSvv7RNdmuP0-XBHoVOi4B7wfUq6KvWez4xH7B19aGjz6U/s320/Creation%20Vlog01%20-%2003.png)
 
 ##
 
@@ -504,6 +511,8 @@ This will keep the blog intellectually honest.
 
 This is where Life.Human comes in.
 
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsdhWANBeKCta__TiS13rM5LW2XHxXRaOMHXBM8Edfq8uByBKjMDw65zpJQg009WYaiSZRVVDL1Zf49j5YBfWiv8VnQvDrDNGMTQgNzi0TUm8W9Ea81nZ_pNbkYk3_wUFZgTSitWaYoPk2402cZZBkqCaFQBg83658zxidTV42zN2kxMKT_t0l9w072u8/s320/ChatGPT%20Image%20Aug%2013,%202026,%2004_24_02%20PM.png)
+
 We are not studying creation merely to know what happened billions or trillions of years ago.
 
 We are asking:
@@ -533,6 +542,8 @@ The reader is taught how to inquire.
 And that, fittingly, is where the Bhāgavatam itself leaves us:
 
 > “That which is true everywhere and at all times—seek to know that.”
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUP2cRe_TPslV6PtZppU21zT79oxX6gXKdSB3nvMcQD4gLlspTBYtg8xXLnXFliCXnlaI8v_MfBRaMIPsbz4eSNbF5InOGCEcAOe94yI0Z_IttCUNM6u3ybNZVhD1U3B_kzFL9fesPJ08hhw4GeNuDr1LR1rIrlyGAU-aQJHAhaevMpVoF1wD0QvwohFQ/s320/Life.Human%20Picture.png)
 
 ## Life.Human
 
