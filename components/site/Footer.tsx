@@ -24,6 +24,7 @@ export function Footer() {
       <div className={styles.inner}>
         <div className={styles.mark}>
           <p className={styles.name}>Life.Human</p>
+          <p className={styles.tagline}>Question. Think. Choose Humanity.</p>
           <p className={styles.question}>What does it mean to be human?</p>
         </div>
 
@@ -48,7 +49,7 @@ export function Footer() {
       </div>
 
       <div className={styles.base}>
-        <p>Tuṣṭi and Puṣṭi — contentment and nourishment.</p>
+        <p>A better world begins with a better human.</p>
         <p>&copy; {new Date().getFullYear()} Life.Human</p>
       </div>
     </footer>

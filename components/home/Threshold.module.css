@@ -28,12 +28,32 @@
   inline-size: 100%;
 }
 
+/* The tagline, set the way it appears under the mark: small, wide, quiet —
+   so it introduces the question without competing with it. */
+.tagline {
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-block-end: clamp(1.5rem, 3.5vw, 2.25rem);
+  animation: settle 1.4s var(--ease) both;
+}
+
+.creed {
+  display: block;
+  font-style: italic;
+  color: var(--ink);
+  margin-block-end: 0.6em;
+}
+
 .question {
   max-width: 15ch;
   color: var(--ink);
   /* The one entrance the site makes on load. Everything else waits to be
      scrolled to. */
-  animation: settle 1.4s var(--ease) both;
+  animation: settle 1.4s var(--ease) 110ms both;
 }
 
 .support {

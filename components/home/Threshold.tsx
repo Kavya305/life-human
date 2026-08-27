@@ -20,6 +20,8 @@ export function Threshold() {
       </div>
 
       <div className={styles.inner}>
+        <p className={styles.tagline}>Question. Think. Choose Humanity.</p>
+
         <h1 id="the-question" className={`display ${styles.question}`}>
           What does it mean
           <br />
@@ -27,6 +29,9 @@ export function Threshold() {
         </h1>
 
         <p className={styles.support}>
+          <span className={styles.creed}>
+            A better world begins with a better human.
+          </span>
           Life.Human is an exploration of life, humanity, wisdom and the ideas
           that shape the way we live.
         </p>

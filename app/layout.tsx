@@ -26,15 +26,16 @@ const inter = Inter({
 const site = {
   name: 'Life.Human',
   question: 'What does it mean to be human?',
+  tagline: 'Question. Think. Choose Humanity.',
   description:
-    'Life.Human is an exploration of life, humanity, wisdom and the ideas that shape the way we live. A growing archive of human questions.',
+    'A better world begins with a better human. Life.Human is an exploration of life, humanity, wisdom and the ideas that shape the way we live.',
   url: 'https://lifehuman.example',
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.question}`,
+    default: `${site.name} — ${site.tagline}`,
     template: `%s — ${site.name}`,
   },
   description: site.description,
@@ -51,13 +52,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: site.name,
-    title: `${site.name} — ${site.question}`,
+    title: `${site.name} — ${site.tagline}`,
     description: site.description,
     locale: 'en',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${site.name} — ${site.question}`,
+    title: `${site.name} — ${site.tagline}`,
     description: site.description,
   },
   robots: { index: true, follow: true },
