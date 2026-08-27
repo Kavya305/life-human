@@ -88,6 +88,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: "document.documentElement.setAttribute('data-reveal','on')",
           }}
         />
+        {/* Netlify sends invite and password-recovery links to the site root,
+            but the login form lives at /admin. Rather than load the Identity
+            widget on every public page, this watches for one of those tokens
+            and only then hands the reader over to the editor. The publication
+            itself stays free of third-party script. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var h=location.hash;var t=['invite_token','recovery_token','confirmation_token','email_change_token'];for(var i=0;i<t.length;i++){if(h.indexOf(t[i]+'=')>-1){location.replace('/admin/'+h);return;}}})()",
+          }}
+        />
       </head>
       <body>
         <a href="#main" className="skip">
