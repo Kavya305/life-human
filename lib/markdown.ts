@@ -57,7 +57,7 @@ const decodeEntities = (text: string) =>
     .replace(/&#8211;|&ndash;/gi, '–')
     .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
 
-function htmlToMarkdown(html: string): string {
+export function htmlToMarkdown(html: string): string {
   return (
     html
       /* Anything that can never become text goes first. */
