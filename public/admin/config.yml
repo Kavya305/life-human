@@ -10,7 +10,7 @@
 
 backend:
   name: github
-  repo: life-human26/life-human-portfolio
+  repo: Kavya305/life-human
   branch: main
   # Points at this site's own OAuth handler (app/api/auth) rather than
   # Netlify's, because we deploy on Vercel.
