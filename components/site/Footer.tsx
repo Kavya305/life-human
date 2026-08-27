@@ -23,6 +23,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.mark}>
+          <img className={styles.emblem} src="/mark.webp" alt="" width={56} height={56} />
           <p className={styles.name}>Life.Human</p>
           <p className={styles.tagline}>Question. Think. Choose Humanity.</p>
           <p className={styles.question}>What does it mean to be human?</p>

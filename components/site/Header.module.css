@@ -32,6 +32,13 @@
 
 /* ── Wordmark ─────────────────────────────────────────────────────── */
 
+.mark {
+  inline-size: 30px;
+  block-size: 30px;
+  margin-inline-end: 0.6rem;
+  flex: none;
+}
+
 .wordmark {
   display: inline-flex;
   align-items: center;

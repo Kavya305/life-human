@@ -18,6 +18,12 @@
   gap: clamp(2.5rem, 6vw, 5rem);
 }
 
+.emblem {
+  inline-size: 56px;
+  block-size: 56px;
+  margin-block-end: 1.25rem;
+}
+
 .name {
   font-family: var(--sans);
   font-size: 0.8125rem;

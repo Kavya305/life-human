@@ -61,6 +61,9 @@ export function Header() {
     <header className={styles.header} data-moved={moved} data-open={open}>
       <div className={styles.inner}>
         <Link href="/" className={styles.wordmark} aria-label="Life.Human — home">
+          {/* The emblem alone: the wordmark beside it is live text, so the
+              full lockup would set the name twice. */}
+          <img className={styles.mark} src="/mark.webp" alt="" width={30} height={30} />
           <span>Life</span>
           <span className={styles.dot} aria-hidden="true" />
           <span>Human</span>
