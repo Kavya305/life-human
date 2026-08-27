@@ -7,6 +7,9 @@
     <title>Life.Human — Editor</title>
   </head>
   <body>
+    <!-- Netlify Identity handles the login, so the editor needs no OAuth app
+         of its own, no API keys and no GitHub account for the writer. -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script src="https://unpkg.com/decap-cms@^3.8.4/dist/decap-cms.js"></script>
   </body>
 </html>

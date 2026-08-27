@@ -40,22 +40,27 @@ closes and takes it.
 
 Two ways in. Both write the same files.
 
-### The editor (what the owner uses)
+### The editor (what the writer uses)
 
-Go to **`/admin`** and sign in with GitHub. Only accounts with write access to
-this repository can log in — that is the whole of the access control, so grant
-repo access carefully.
+Go to **`/admin`**, sign in with an email and password, click **New**, write,
+click **Publish**. No GitHub account, no code, no keys.
 
-Publishing commits a markdown file to `content/pieces/` and Vercel rebuilds.
-Drafts go to a branch first (`publish_mode: editorial_workflow`), so nothing
-goes live by accident.
+Publishing commits a markdown file to `content/pieces/` and Netlify rebuilds
+the site, usually within a minute. Drafts stay in the Workflow tab until they
+are set to Ready, so nothing goes live by accident.
 
-Setup, once:
+Setup, once, in the Netlify dashboard:
 
-1. GitHub → Settings → Developer settings → OAuth Apps → New OAuth App.
-   Homepage `https://<site>`, callback `https://<site>/api/callback`.
-2. In Vercel, add `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`.
-3. Put the deployed URL into `base_url` in `public/admin/config.yml`.
+1. **Site configuration → Identity → Enable Identity.**
+   Set registration to **Invite only** — otherwise anyone could sign up and
+   publish.
+2. **Identity → Services → Git Gateway → Enable.** This is what lets the
+   editor write to the repo without the writer having a GitHub account.
+3. **Identity → Invite users** — enter the writer's email. They get a link,
+   set a password, and are in.
+
+To add another writer later, invite their email. To remove one, delete them
+from the Identity user list; their access is gone immediately.
 
 ### By hand
 
@@ -266,8 +271,8 @@ components/
               TodayIWill  SeriesStrip  Principles
   archive/    ArchiveBrowser  PieceCard
   piece/      Claim
-app/api/      auth  callback   (GitHub OAuth for the editor)
 public/admin/ the CMS: index.html + config.yml
+netlify.toml  build settings
 content/      types  pillars  series  principles  today  about
 content/pieces/  one markdown file per piece
 lib/          content (queries)  pieces (loader)  markdown (parser)  format
@@ -275,6 +280,10 @@ lib/          content (queries)  pieces (loader)  markdown (parser)  format
 
 Almost everything is a server component. The only client components are
 `Header` (menu state) and `TodayIWill` (the swap).
+
+Hosted on Netlify. That choice is load-bearing: Netlify Identity gives the
+writer an email-and-password login with no GitHub account and no OAuth app to
+maintain, and it places no restriction on who may push to the repo.
 
 `/explore` is a **server** component and its filters are **links**, not
 buttons. Every view of the shelf has a real address: crawlable, linkable,
@@ -288,8 +297,8 @@ bundle. A library's shelves should have addresses.
 - [ ] Replace the sample content in `content/pieces/`. It is written rather
       than dummied so the typography could be judged honestly — **do not ship
       any of it as established fact.**
-- [ ] Create the GitHub OAuth app and set the two Vercel env vars (see above).
-- [ ] Put the real deployed URL into `base_url` in `public/admin/config.yml`.
+- [ ] Enable Identity and Git Gateway in Netlify, set registration to
+      **Invite only**, and invite the writer (see above).
 - [ ] Set the real domain in `app/layout.tsx` (`site.url`), `app/sitemap.ts`
       and `app/robots.ts`.
 - [ ] Point the footer social links at the real accounts.

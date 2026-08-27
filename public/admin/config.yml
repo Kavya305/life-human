@@ -1,21 +1,17 @@
 # Life.Human — editor configuration
 #
 # The CMS writes markdown files into content/pieces/. Every publish is a real
-# commit to the repo, which then triggers a Vercel rebuild. There is no
-# database and no separate content service; the repo stays the single source
-# of truth.
+# commit to the repo, which then triggers a rebuild. There is no database and
+# no separate content service; the repo stays the single source of truth.
 #
-# Access is repo access: only GitHub accounts with write access to this
-# repository can log in and publish.
+# Writers sign in with an email and password through Netlify Identity — no
+# GitHub account needed. Only people invited in the Netlify dashboard
+# (Site configuration -> Identity -> Invite users) can get in, so registration
+# must stay set to "Invite only".
 
 backend:
-  name: github
-  repo: Kavya305/life-human
+  name: git-gateway
   branch: main
-  # Points at this site's own OAuth handler (app/api/auth) rather than
-  # Netlify's, because we deploy on Vercel.
-  base_url: https://life-human-portfolio.vercel.app
-  auth_endpoint: api/auth
   commit_messages:
     create: 'Add {{slug}}'
     update: 'Update {{slug}}'
@@ -36,11 +32,11 @@ collections:
     label_singular: Piece
     folder: content/pieces
     create: true
-    slug: '{{fields.slug}}'
+    slug: '{{slug}}'
     identifier_field: title
     summary: '{{title}} — {{pillar}}'
     sortable_fields: [date, title, pillar]
-    preview_path: 'explore/{{fields.slug}}'
+    preview_path: 'explore/{{slug}}'
     fields:
       - label: Title
         name: title
@@ -53,14 +49,6 @@ collections:
         hint: >-
           The real subject of the piece, as a question. This is set above the
           title and larger than it. Every piece needs one.
-
-      - label: Web address
-        name: slug
-        widget: string
-        pattern:
-          - '^[a-z0-9]+(?:-[a-z0-9]+)*$'
-          - Lowercase words separated by hyphens, e.g. before-the-map
-        hint: Appears in the URL. Do not change it once a piece is published.
 
       - label: Pillar
         name: pillar

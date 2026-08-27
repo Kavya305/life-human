@@ -1,0 +1,18 @@
+# Netlify build settings.
+#
+# The Next.js plugin handles the App Router: static pages are served as files,
+# and the one server-rendered route (/explore, which reads query params) runs
+# as a function.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# The editor is private tooling, not part of the publication.
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
