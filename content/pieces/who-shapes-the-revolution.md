@@ -5,7 +5,7 @@ pillar: "understand"
 type: "essay"
 date: "2026-08-06"
 dek: "Explore why those absent from shaping a revolution's vision risk becoming tools in someone else's pursuit of power."
-cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9Caunc8fo_V3uGIKyEt2gDpbqAdpAF8AmnTnjw7f4BZK8CRcASJGtC559Qi7LH-4XkdpFtD6ILsO0NO1HN-dB3I2NG3up5QKvXEt3r89uCitHbRcjkVkuBPsXtZmIKIcBitzlFSEy9I3hRr89uTSRxHvdLkxDviT0P-uz6ETeJ3RwJhcJ6BWx9WJsfkE/s320/Revlution%20series%20-%202.png"
+cover: "/uploads/revlution-series-2-3982010d.webp"
 plate: "column"
 minutes: 3
 ---
@@ -72,7 +72,7 @@ Is there space for ordinary people to participate in shaping the future?
 
 Because if you are absent from the table where the future is being designed, someone else will design that future for you.
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeLujvcltDMtx90Nu4pP458_8qTHeyNUZQwrYZ6XCMdc-uqRL0RFqtWfMXKeoZG7LoDRbEcq4adetLnGWi0fcAiFPaT0yhS9bRj8hpFsl8W5cpvrt0PaANj0zT3GCDBhtiw8W2gQI-cGX4epxFey6_bmlQs_f8AfcHAMKevXpvwf_WAtzOhYG19tqJJ38/s320/ChatGPT%20Image%20Aug%206,%202026,%2005_08_07%20PM.png)
+![](/uploads/chatgpt-image-aug-6-2026-05-08-07-pm-d84591b8.webp)
 
 ## Life.Human
 

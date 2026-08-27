@@ -5,7 +5,7 @@ pillar: "understand"
 type: "essay"
 date: "2026-07-31"
 dek: "Is Bharat becoming richer but losing its civilizational soul? An exploration of development, family, values, GDP, and humanity."
-cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghyqqlcvY7omSREUzVpwRAT3rgKSEoxEgmPWkAPvYgnIYXnjgAXNKSMKycB_fprk7O5wVRQTjQlRo_q8FW9bQ_kjTfp1ICrmWm9fvKqQ87mh8ZBDeVib-q4UcOGybUeYQx1UOU9ItbcEhPL_7TncQ2Y2Qn_wtCg5NHd7mjtFXtLY_-vQNG4cnAn3FkNIU/w400-h200/Banner%20-%20eng.png"
+cover: "/uploads/banner-eng-b6ef6ee1.webp"
 plate: "column"
 minutes: 4
 ---

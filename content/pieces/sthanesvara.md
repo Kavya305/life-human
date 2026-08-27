@@ -6,7 +6,7 @@ type: "essay"
 seriesSlug: "history-of-bharat"
 part: 1
 date: "2026-08-19"
-cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizXX9jVb1xBbp2gblMQJZTXpNEHNTIvfNxjuj2v3lDj6TjgLw2zTCOeaVoPboxUg6sY3C4_6yyC_Ypa4c-qnsi_LD4QKT8HZGMDmWH1tHCnZUg8FP3T7rynV8u9TYeSbp9QWCfaXaO_3vhj3mF65UoRRHCZhLypxdE2xPmgs5CJSpi0umwD-t-vQwFCJ0/s320/Life.Human%20Picture.png"
+cover: "/uploads/life-human-picture-b33e12b7.webp"
 plate: "column"
 minutes: 7
 ---

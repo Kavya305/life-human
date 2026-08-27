@@ -361,7 +361,7 @@ Jai Mata Di. 🙏
 
 The historical and contemporary details above are based primarily on the Government of Himachal Pradesh, District Una, which provides the official description of the shrine, its location and traditional fairs, supplemented by historical/religious reference material. (District Una)
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5BuUkHhFzH0JXNnZ6HSc3c7P2wW4BAu7sYIvd9l2yQBdq-4TVxJ4HOLkrRGt3KO2H6jUsZuTguuu4lGlPfEhwtx07ZKXL6YyrITIWbP_bmZ-bk92Q1DXWdyo2P5yEsudYvu8uWFyTZWpQXeKr70PAyNSBkBPsb4klPXgjMt_sfCowstAr4AAQ0HrU6VI/s320/Life.Human%20Picture.png)
+![](/uploads/life-human-picture-121f1531.webp)
 
 ## Life.Human
 

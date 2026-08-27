@@ -5,7 +5,7 @@ pillar: "think"
 type: "essay"
 date: "2026-08-07"
 dek: "Discover the three sources of human suffering—Ādhyātmika, Ādhibhautika, and Ādhidaivika—and explore their origins from ancient Indian philosophy to mo"
-cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdcIvRLjGTnKb7eUxsBNaQ31RKvvn0iuwkA7oSqpBKTQH5Nx-T8l5fi6htu53VUrHLaVDg13_IYR0XE8F_BsPIdqluX42_0OUpfk6IV4xpNm-LPim8dcbdTSmXll8sLw8TewB1m2WwbWa4gj13ZSVD_trVdgJmSGQI034n2k8AD_pLHQtTg02H7mPtn7w/s320/The%20ThreeFold%20Sufferings%2001.png"
+cover: "/uploads/the-threefold-sufferings-01-66e27c98.webp"
 plate: "aperture"
 minutes: 6
 ---
@@ -38,7 +38,7 @@ Though ancient in origin, this classification remains surprisingly relevant in t
 
 ## The First Fire: Ādhyātmika Tāpa
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-xc-gpDr_I6Gs46DP1-sqN3KmZUWGHnu180ilaB_dvbh9zME20ZRupzLHetPnq2udpwb7ALnQXj5JrNETbMHgNbM4sDjLrwjABormLJcokspHGhjbVME3OWEnFxbdCobVq-oSdcxWmmfgZZjdg9X1DCs3T3yIFspQSFWi1Sec6HDM9AlQN7T4IgSz6Zk/s320/The%20ThreeFold%20Sufferings%2002.png)
+![](/uploads/the-threefold-sufferings-02-f112ce2d.webp)
 
 The word Ādhyātmika comes from adhi ("pertaining to") and ātman ("self").
 
@@ -58,7 +58,7 @@ A restless mind can remain unhappy even in comfort, while a disciplined mind may
 
 ## The Second Fire: Ādhibhautika Tāpa
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4MIbUd-mEN6ru4_W6nTidPNU4SwAUMkUw2B3yZaOFNMtmYghD6w5sBBh2j1ae91bIkmGHbrsHXyKWD1ozpo_NIQ0-qansCmvCK5Ym4ZZeq6aL4ji3ZSd5hXzohtaRo13A8qeeRmmQNLzOBpuhqSxIgr8VcXt90e7AQ8IXJegYLBPct7HgueR3v2S1AHI/s320/The%20ThreeFold%20Sufferings%2003.png)
+![](/uploads/the-threefold-sufferings-03-b0bc5971.webp)
 
 The second category is Ādhibhautika Tāpa.
 
@@ -96,7 +96,7 @@ The ancient classification reminds us that not every problem originates within u
 
 ## The Third Fire: Ādhidaivika Tāpa
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKpbY3bj5HQ8gA7zDJt0bf971xsBgzNras9ja0BGCrU9BXpAhLzWBrb6HM2YKV_nkQglaATJXS4VP_kzlge_kvdAZwsj-6D6e5DokuTaX4lnuFUf3QQQuS9ARmZ6fp5XpttVqIwA0UR2d7YPabCh0ADFHaL_OOxacfsOn8Y4ciH9VWnind5YrPUqq3Uts/s320/The%20ThreeFold%20Sufferings%2004.png)
+![](/uploads/the-threefold-sufferings-04-8239ee73.webp)
 
 The third category is Ādhidaivika Tāpa.
 
@@ -236,7 +236,7 @@ Natural suffering calls for preparedness, resilience, scientific understanding, 
 
 ##
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuyFjlOyFH2ru_SyuRC00G1kcidzby1MxVeMzhbILiHssNmDth3s9aFiDTZV7CpR016VtQtctU2vZSAcGThRWNYOFlvYIdQVgbUWFL-fFjdgrVVH-amSOvJ5mvncXGizBrAslvZLHZOIV-vk89p3gdIKGHI4XtGITy26f4MvDqOK6VuBdS2UyjOxYNis4/s320/The%20ThreeFold%20Sufferings%2005.png)
+![](/uploads/the-threefold-sufferings-05-8eb30e51.webp)
 
 The greatness of Sanātana Dharma lies not merely in offering answers, but in encouraging thoughtful inquiry.
 
@@ -262,7 +262,7 @@ At Life.Human, we believe that the timeless wisdom of Sanātana Dharma should no
 
 The three tapas remind us that suffering may be inevitable, but how we respond to it remains our greatest freedom.
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh36dayvAkY-tATfRDoRYE_FG_Tgz6cbG24camJW-XVBvKo83BkOmPFNjah99WDbWV1xWA1uxTb8G_w5ZCVeiLsO2Nq0HFQn7fW1eXbQzbxpR0rC6dwZJCCYh5PTy__3bQkfuLptloLKIl3X14s2kxpa3yJswPMRZ701oOin0IcnK35nXCmm3c5WvvJzeY/s320/Life.Human%20Picture.png)
+![](/uploads/life-human-picture-276f223e.webp)
 
 ## Life.Human
 

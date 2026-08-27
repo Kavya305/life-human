@@ -4,7 +4,7 @@ question: ""
 pillar: "discover"
 type: "essay"
 date: "2026-08-04"
-cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcv-YKxAJmpDoKHoo5R0EJehg5CFcWhYr-fWn7EibZLSZFj5W4xbz7LagcWs-elaVchIEpurgEaUZy_I1-WJK0dwWdlFY5fFhTd6bk0fZXT4gQT0uL_Yfc2njP4Kb5OCDjsncMM11AVcpBKXTRXBFHHK1O3qyYoFew4QE7rvE8BkHzEJHNx2Sr5WoFx7k/s320/Kangra%20YT.png"
+cover: "/uploads/kangra-yt-6c5c7552.webp"
 plate: "manuscript"
 minutes: 5
 ---
@@ -117,6 +117,6 @@ Because when we understand where we come from, we make better decisions about wh
 
 Exploring Humanity. One Story at a Time.
 
-![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhw3AmuaPoe2sWRPbKk_9ikflP4jZ5hd_QI-LTkisHCmIIEA0j0ybuUQepuP-3jDVgMNV3oFBsUf7KvR40QrRcFnw4CW-Z4j2yEbIk81Jd94Z2d7ek7BOlhppwk31DwmLy94UwubzjmPCQPJ1UBlh_GC0T4ncBkSiFwJpv0oUWXcT0rL8-Z6Y5xSJ1VCZA/s320/Life.Human%20Logo.png)
+![](/uploads/life-human-logo-411c0e77.webp)
 
 Exploring Humanity. One Story at a Time.

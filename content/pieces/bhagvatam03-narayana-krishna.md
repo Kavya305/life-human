@@ -6,7 +6,7 @@ type: "essay"
 seriesSlug: "srimad-bhagavatam"
 part: 3
 date: "2026-08-26"
-cover: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpuPZ-69MjG_sTZo47v6bY4SRvl07CcTz3z0EViAtQwQvDIRCx9WBm1idtgQiNgwV2mHQxWFR3V-bFV4_bOIGjv6MD3uQF4U1diJ8UB8LgPWkvqDL06B16kfkiiFo-uo2OCBoj253sBAfdgvK9JQ3D118AB3SBAAFrD5iIqLNeZgJyrfm0ULvrXFN4s1M/s320/ChatGPT%20Image%20Aug%2025,%202026,%2006_15_44%20PM.png"
+cover: "/uploads/chatgpt-image-aug-25-2026-06-15-44-pm-4cd2a9cf.webp"
 plate: "manuscript"
 minutes: 7
 draft: true
