@@ -20,13 +20,17 @@ export function Threshold() {
       </div>
 
       <div className={styles.inner}>
-        <p className={styles.tagline}>Question. Think. Choose Humanity.</p>
-
-        <h1 id="the-question" className={`display ${styles.question}`}>
-          What does it mean
+        {/* Three sentences, stacked. Set on separate lines they read as three
+            deliberate acts rather than one slogan. */}
+        <h1 id="the-question" className={`display ${styles.headline}`}>
+          Question.
           <br />
-          to be <em>human</em>?
+          Think.
+          <br />
+          Choose <em>humanity</em>.
         </h1>
+
+        <p className={styles.anchor}>What does it mean to be human?</p>
 
         <p className={styles.support}>
           <span className={styles.creed}>

@@ -28,17 +28,28 @@
   inline-size: 100%;
 }
 
-/* The tagline, set the way it appears under the mark: small, wide, quiet —
-   so it introduces the question without competing with it. */
-.tagline {
-  font-family: var(--sans);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold-deep);
-  margin-block-end: clamp(1.5rem, 3.5vw, 2.25rem);
+/* The headline. Three stacked lines want slightly tighter leading than a
+   sentence that wraps on its own. */
+.headline {
+  max-width: 14ch;
+  color: var(--ink);
+  line-height: 0.98;
   animation: settle 1.4s var(--ease) both;
+}
+
+/* The central question stays on the page, just beneath the headline rather
+   than as it. It is still what the whole site is built around. */
+.anchor {
+  margin-block-start: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-family: var(--serif);
+  font-size: var(--step-2);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+  color: var(--gold-deep);
+  max-width: 24ch;
+  animation: settle 1.4s var(--ease) 110ms both;
 }
 
 .creed {
@@ -48,16 +59,8 @@
   margin-block-end: 0.6em;
 }
 
-.question {
-  max-width: 15ch;
-  color: var(--ink);
-  /* The one entrance the site makes on load. Everything else waits to be
-     scrolled to. */
-  animation: settle 1.4s var(--ease) 110ms both;
-}
-
 .support {
-  margin-block-start: clamp(1.75rem, 4vw, 2.75rem);
+  margin-block-start: clamp(1.5rem, 3.5vw, 2.25rem);
   max-width: 34ch;
   font-size: var(--step-1);
   line-height: 1.6;
@@ -142,7 +145,7 @@
     mask-image: radial-gradient(ellipse at 70% 30%, #000, transparent 72%);
   }
 
-  .question {
+  .headline {
     max-width: 12ch;
   }
 
@@ -152,7 +155,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .question,
+  .headline,
+  .anchor,
   .support,
   .begin {
     animation: none;
