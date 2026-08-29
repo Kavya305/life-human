@@ -25,6 +25,10 @@ const dry = args.includes('--dry');
 /* Drafts are excluded unless asked for, and even then they arrive marked as
    drafts so nothing unpublished becomes public by importing it. */
 const includeDrafts = args.includes('--drafts');
+/* Limit the run to particular pieces, so refreshing one post cannot disturb
+   edits made to the others since they were imported. */
+const only = (args.find((a) => a.startsWith('--only=')) || '').replace('--only=', '')
+  .split(',').map((s) => s.trim()).filter(Boolean);
 const feeds = args.filter((a) => !a.startsWith('--'));
 if (!feeds.length) {
   console.error('Usage: import-blogger.mjs [--dry] <feed.atom> [...]');
@@ -52,8 +56,9 @@ function tag(entry, name) {
   const m = entry.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)</${name}>`));
   return m ? decode(m[1]).trim() : '';
 }
+/* Takeout quotes attributes with ", the public feed with '. Both, then. */
 function attrOf(entry, name, attr) {
-  const m = entry.match(new RegExp(`<${name}[^>]*\\b${attr}="([^"]*)"`));
+  const m = entry.match(new RegExp(`<${name}[^>]*\\b${attr}=["']([^"']*)["']`));
   return m ? decode(m[1]) : '';
 }
 
@@ -151,17 +156,33 @@ for (const feed of feeds) {
   const xml = fs.readFileSync(feed, 'utf8');
   const blog = path.basename(path.dirname(feed));
 
-  for (const e of entries(xml)) {
-    if (tag(e, 'blogger:type') !== 'POST') continue;
+  /* Two shapes: a Takeout export carries blogger:* elements, while the blog's
+     own public feed is plain Atom and marks post-ness with a category. */
+  const isTakeout = xml.includes('schemas.google.com/blogger/2018');
 
-    const status = tag(e, 'blogger:status');
-    const trashed = tag(e, 'blogger:trashed');
+  for (const e of entries(xml)) {
+    /* The /feeds/posts/default endpoint returns posts only, so there is
+       nothing to filter on the public side. */
+    if (isTakeout && tag(e, 'blogger:type') !== 'POST') continue;
+
+    /* A draft never appears in the public feed, so anything found there is
+       published by definition. */
+    const status = isTakeout ? tag(e, 'blogger:status') : 'LIVE';
+    const trashed = isTakeout ? tag(e, 'blogger:trashed') : '';
     let title = tag(e, 'title');
     const html = tag(e, 'content');
-    const dek = tag(e, 'blogger:metaDescription');
+    const dek = isTakeout ? tag(e, 'blogger:metaDescription') : '';
     const published = (tag(e, 'published') || tag(e, 'blogger:created')).slice(0, 10);
-    const labels = (attrOf(e, 'category', 'term') || '').split('\n').filter(Boolean);
-    const filename = tag(e, 'blogger:filename');
+
+    /* Takeout packs every label into one newline-joined term; the public feed
+       uses one category element per label. */
+    const labels = isTakeout
+      ? (attrOf(e, 'category', 'term') || '').split('\n').filter(Boolean)
+      : [...e.matchAll(/<category[^>]*term=["']([^"']*)["']/g)].map((m) => decode(m[1]));
+
+    const filename = isTakeout
+      ? tag(e, 'blogger:filename')
+      : (e.match(/<link[^>]*rel=["']alternate["'][^>]*href=["']([^"']*)["']/) || [, ''])[1];
 
     let body = htmlToMarkdown(html);
 
@@ -198,10 +219,23 @@ for (const feed of feeds) {
 
     /* Prefer Blogger's own URL for the address, so old links stay meaningful. */
     let slug = slugify(
-      (filename.split('/').pop() || '').replace(/\.html$/i, '') || title,
+      (decodeURIComponent(filename).split('/').pop() || '').replace(/\.html$/i, '') || title,
     );
     while (seen.has(slug)) slug = `${slug}-2`;
     seen.add(slug);
+
+    if (only.length && !only.includes(slug)) continue;
+
+    /* Refreshing an existing piece must not discard editorial work: the
+       central question and description are written here, never in Blogger. */
+    const existing = path.join(OUT, `${slug}.md`);
+    let keptQuestion = '';
+    let keptDek = '';
+    if (fs.existsSync(existing)) {
+      const prior = fs.readFileSync(existing, 'utf8');
+      keptQuestion = (prior.match(/^question:\s*"([\s\S]*?)"\s*$/m) || [, ''])[1];
+      keptDek = (prior.match(/^dek:\s*"([\s\S]*?)"\s*$/m) || [, ''])[1];
+    }
 
     const pillar = guessPillar(title, labels, plain);
     const { seriesSlug, part } = detectSeries(title);
@@ -209,13 +243,14 @@ for (const feed of feeds) {
 
     const fm = [];
     fm.push(`title: ${q(title)}`);
-    fm.push(`question: ""`); // deliberately blank — an editorial decision
+    fm.push(`question: ${q(keptQuestion)}`); // blank unless already written here
     fm.push(`pillar: ${q(pillar)}`);
     fm.push(`type: "essay"`);
     if (seriesSlug) fm.push(`seriesSlug: ${q(seriesSlug)}`);
     if (part) fm.push(`part: ${part}`);
     fm.push(`date: ${q(published)}`);
-    if (dek) fm.push(`dek: ${q(dek)}`);
+    const finalDek = dek || keptDek;
+    if (finalDek) fm.push(`dek: ${q(finalDek)}`);
     if (cover) fm.push(`cover: ${q(cover)}`);
     fm.push(`plate: ${q(PLATES[pillar])}`);
     fm.push(`minutes: ${Math.max(1, Math.round(words / 200))}`);

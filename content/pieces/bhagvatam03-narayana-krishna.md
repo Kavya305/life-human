@@ -9,7 +9,6 @@ date: "2026-08-26"
 cover: "/uploads/chatgpt-image-aug-25-2026-06-15-44-pm-4cd2a9cf.webp"
 plate: "manuscript"
 minutes: 7
-draft: true
 ---
 
 ## Aiśvarya and Mādhurya: Nārāyaṇa and Kṛṣṇa

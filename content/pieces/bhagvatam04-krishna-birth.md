@@ -9,7 +9,6 @@ date: "2026-08-28"
 cover: "/uploads/birth01-2b3c2656.webp"
 plate: "manuscript"
 minutes: 17
-draft: true
 ---
 
 ## Kṛṣṇa's Appearance: The Story of His Birth in the Śrīmad-Bhāgavatam
@@ -214,6 +213,8 @@ He therefore sees the appearance of Kṛṣṇa not as an ordinary biological ev
 
 ## 5. Devakī Recognizes Him — and Becomes Afraid
 
+![](/uploads/birth-05-e7a2109a.webp)
+
 Then the story becomes deeply human.
 
 Devakī also recognizes the divine nature of the child.
@@ -251,6 +252,8 @@ a mother who wants to protect her newborn child.
 Her knowledge does not erase her emotion.
 
 ## 6. Devakī's Philosophical Prayer
+
+![](/uploads/birth-06-3cf2ae34.webp)
 
 Devakī's prayer then takes us even deeper.
 
@@ -300,6 +303,8 @@ The philosophical and emotional dimensions of the story meet in one sentence.
 
 ## 7. Kṛṣṇa Speaks
 
+![](/uploads/birth-07-b3db174b.webp)
+
 Until this moment, everyone has been speaking about Kṛṣṇa.
 
 Now Kṛṣṇa speaks.
@@ -324,6 +329,8 @@ The Bhāgavatam places it within a much larger history.
 
 ## 8. Why Did Kṛṣṇa First Appear with Four Arms?
 
+![](/uploads/birth-08-6c9a0bff.webp)
+
 Kṛṣṇa Himself answers this.
 
 He tells Vasudeva and Devakī:
@@ -345,6 +352,8 @@ The divine form tells His parents:
 And then Kṛṣṇa takes the next step.
 
 ## 9. The Supreme — and Their Son
+
+![](/uploads/birth-09-8110b6de.webp)
 
 Kṛṣṇa tells them to think of Him as their son while simultaneously knowing that He is the Supreme Personality of Godhead.
 
@@ -386,6 +395,8 @@ The narrative is already here.
 
 ## 10. The Transformation: Kṛṣṇa Becomes a Child
 
+![](/uploads/birth-10-5d853f3e.webp)
+
 Then comes Śrīmad-Bhāgavatam 10.3.46:
 
 > इत्युक्त्वाऽऽसीद्धरिस्तूष्णीं भगवानात्ममायया । पित्रोः सम्पश्यतोः सद्यो बभूव प्राकृतः शिशुः ॥
@@ -420,6 +431,8 @@ The manifestation has changed.
 
 ## 11. Why This Change Matters
 
+![](/uploads/birth-11-e65d77f8.webp)
+
 The four-armed form answers:
 
 > Who is He?
@@ -450,6 +463,8 @@ This is one of the great mysteries of Kṛṣṇa's appearance.
 
 ## 12. Vasudeva Carries Kṛṣṇa Out of the Prison
 
+![](/uploads/birth-12-82fd539d.webp)
+
 Kṛṣṇa instructs Vasudeva to take Him to Gokula.
 
 Vasudeva carefully takes the child from the delivery room. At the same time, Yoga-māyā appears as the daughter of Yaśodā.
@@ -467,6 +482,8 @@ He simply walks out carrying Kṛṣṇa.
 The prison cannot hold Him.
 
 ## 13. Śeṣa Shelters the Child
+
+![](/uploads/birth-13-35abc243.webp)
 
 Outside, rain is falling.
 
@@ -487,6 +504,8 @@ This is not a contradiction that the narrative tries to eliminate.
 It is part of the mystery.
 
 ## 14. The Yamunā Gives Way
+
+![](/uploads/birth-14-20c587fd.webp)
 
 Vasudeva reaches the Yamunā.
 
@@ -510,6 +529,8 @@ It is on the movement of Kṛṣṇa from Mathurā toward Gokula.
 
 ## 15. Kṛṣṇa Arrives at Nanda's House
 
+![](/uploads/birth-15-30ae49b3.webp)
+
 Vasudeva finally reaches the house of Nanda.
 
 Everyone is asleep.
@@ -531,6 +552,8 @@ The Supreme Lord has entered the world.
 And He is simply placed beside a sleeping mother.
 
 ## 16. Vasudeva Returns to Prison
+
+![](/uploads/birth-16-3102c904.webp)
 
 Vasudeva returns to the prison.
 
@@ -556,6 +579,8 @@ Kṛṣṇa is no longer in Kaṁsa's prison.
 
 ## 17. Yaśodā and the Mystery of the Child
 
+![](/uploads/birth-17-a71f42ee.webp)
+
 The final verse of the chapter says that Yaśodā, exhausted from childbirth and overwhelmed by sleep, did not understand exactly what kind of child had been born to her.
 
 And here the chapter ends.
@@ -573,6 +598,8 @@ The story began with the Supreme appearing in a dazzling divine form.
 It ends with that same Supreme lying as a child in the home of Nanda.
 
 ## 18. What Has Actually Happened?
+
+![](/uploads/birth-18-0fd29419.webp)
 
 If we step back from the individual verses, the entire narrative forms a remarkable progression:
 
@@ -640,6 +667,8 @@ The Supreme has entered the world as someone's child.
 
 ## 19. The Deeper Mystery: God as Child
 
+![](/uploads/birth-19-f3efebe0.webp)
+
 Perhaps the most striking idea in this entire chapter is not that Kṛṣṇa possesses divine power.
 
 That part is expected within a theological narrative.
@@ -669,6 +698,8 @@ The child whom the universe cannot contain will allow Himself to become the chil
 That is the movement from divine majesty toward intimate relationship.
 
 ## 20. Devakī and Yaśodā: Two Ways of Encountering Kṛṣṇa
+
+![](/uploads/birth-20-fde44ecf.webp)
 
 There is another subtle point worth carrying forward.
 
