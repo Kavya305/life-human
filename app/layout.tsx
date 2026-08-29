@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Newsreader, Inter } from 'next/font/google';
 import { Header } from '@/components/site/Header';
 import { Footer } from '@/components/site/Footer';
+import { site } from '@/lib/site';
 import './globals.css';
 
 /**
@@ -23,14 +24,6 @@ const inter = Inter({
   display: 'swap',
 });
 
-const site = {
-  name: 'Life.Human',
-  question: 'What does it mean to be human?',
-  tagline: 'Question. Think. Choose Humanity.',
-  description:
-    'A better world begins with a better human. Life.Human is an exploration of life, humanity, wisdom and the ideas that shape the way we live.',
-  url: 'https://life-human.netlify.app',
-};
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
