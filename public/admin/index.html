@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>Life.Human — Editor</title>
+    <!-- Absolute, deliberately. Left to resolve relatively, "/admin" without a
+         trailing slash looks for /config.yml at the site root and 404s; only
+         "/admin/" happens to work. -->
+    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
   </head>
   <body>
     <!-- Netlify Identity handles the login, so the editor needs no OAuth app

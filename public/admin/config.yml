@@ -164,8 +164,10 @@ collections:
         widget: markdown
         required: false
         # Raw first, because the rich editor crashes on HTML pasted out of
-        # Blogger. Rich mode stays available for its image button.
-        modes: [raw, rich]
+        # Blogger. Rich text stays available for its image button.
+        # The value is "rich_text"; "rich" fails config validation and takes
+        # the whole editor down with it.
+        modes: [raw, rich_text]
         hint: >-
           Paste straight from Blogger here — the formatting is cleaned up
           automatically. For pictures inside the essay, switch to the rich
