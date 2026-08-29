@@ -119,6 +119,15 @@
   overflow: hidden;
 }
 
+/* Shorts are shot in portrait. Played in a 16:9 frame they sit in a letterbox
+   with most of the width unused, so they get their own shape and a width that
+   matches how they were meant to be watched. */
+.film[data-shape='portrait'] {
+  aspect-ratio: 9 / 16;
+  max-inline-size: min(26rem, 100%);
+  margin-inline: auto;
+}
+
 .frame {
   inline-size: 100%;
   block-size: 100%;

@@ -131,11 +131,15 @@ collections:
         value_type: int
         min: 1
 
-      - label: YouTube video ID
+      - label: Video link (YouTube)
         name: videoId
         widget: string
         required: false
-        hint: Just the ID, not the whole link. Leave blank if there is no film yet.
+        hint: >-
+          Paste the YouTube link — a normal watch link, a share link or a
+          Shorts link all work. Videos are not uploaded here: they live on the
+          YouTube channel and play inside the page. Leave blank if the film is
+          not made yet.
 
       - label: Approximate minutes
         name: minutes

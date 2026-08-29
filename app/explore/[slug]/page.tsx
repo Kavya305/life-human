@@ -112,7 +112,12 @@ export default async function PiecePage({
       {/* ── Film ─────────────────────────────────────────────────────── */}
       {(piece.type === 'film' || piece.videoId) && (
         <section className={`shell ${styles.filmWrap}`} aria-label="Film">
-          <div className={styles.film} data-world={world} data-paint="">
+          <div
+            className={styles.film}
+            data-world={world}
+            data-paint=""
+            data-shape={piece.type === 'short' ? 'portrait' : 'landscape'}
+          >
             {piece.videoId ? (
               <iframe
                 className={styles.frame}

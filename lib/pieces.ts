@@ -23,6 +23,30 @@ const PLATES: PlateVariant[] = [
 const str = (v: unknown, fallback = ''): string =>
   typeof v === 'string' ? v : typeof v === 'number' ? String(v) : fallback;
 
+/**
+ * Accepts whatever a writer actually has to hand: a watch link, a share link,
+ * a Shorts link, an embed link, or a bare id. Asking someone to dig the id out
+ * of a URL is asking them to do the computer's job.
+ */
+export function youtubeId(input: string): string {
+  const value = input.trim();
+  if (!value) return '';
+  if (/^[\w-]{11}$/.test(value)) return value;
+
+  const patterns = [
+    /[?&]v=([\w-]{11})/,
+    /youtu\.be\/([\w-]{11})/,
+    /\/shorts\/([\w-]{11})/,
+    /\/embed\/([\w-]{11})/,
+    /\/live\/([\w-]{11})/,
+  ];
+  for (const re of patterns) {
+    const hit = value.match(re);
+    if (hit) return hit[1];
+  }
+  return '';
+}
+
 const strList = (v: unknown): string[] =>
   Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : [];
 
@@ -75,7 +99,7 @@ function readOne(file: string): Piece | null {
     plate,
     ...(str(data.cover) ? { cover: str(data.cover) } : {}),
     ...(str(data.coverAlt) ? { coverAlt: str(data.coverAlt) } : {}),
-    ...(str(data.videoId) ? { videoId: str(data.videoId) } : {}),
+    ...(youtubeId(str(data.videoId)) ? { videoId: youtubeId(str(data.videoId)) } : {}),
     ...(typeof data.minutes === 'number' ? { minutes: data.minutes } : {}),
     ...(essay.length ? { essay } : {}),
     ...(sources.length ? { sources } : {}),
